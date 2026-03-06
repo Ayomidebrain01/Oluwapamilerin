@@ -26,7 +26,7 @@
   <meta property="og:image" content="https://ayomidebrain01.github.io/Oluwapamilerin/preview.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Olúwapámílérìn Ayọ̀midé — Real Estate Web Developer" />
+  <meta property="og:image:alt" content="Olúwapámílérìn Ayọ̀midé, Real Estate Web Developer" />
   <meta property="og:url" content="https://ayomidebrain01.github.io/Oluwapamilerin/" />
   <meta property="og:site_name" content="Olúwapámílérìn Ayọ̀midé" />
   <meta property="og:locale" content="en_US" />
@@ -36,7 +36,7 @@
   <meta name="twitter:title" content="Olúwapámílérìn Ayọ̀midé | Real Estate Web Developer" />
   <meta name="twitter:description" content="Real estate web developer building premium, high-converting websites for realtors and property brands worldwide." />
   <meta name="twitter:image" content="https://ayomidebrain01.github.io/Oluwapamilerin/preview.png" />
-  <meta name="twitter:image:alt" content="Olúwapámílérìn Ayọ̀midé — Real Estate Web Developer" />
+  <meta name="twitter:image:alt" content="Olúwapámílérìn Ayọ̀midé, Real Estate Web Developer" />
 
   <!-- ── SCHEMA.ORG STRUCTURED DATA ── -->
   <script type="application/ld+json">
@@ -217,6 +217,8 @@
     .mobile-menu.open .mobile-menu-links li:nth-child(4) { transition-delay: 0.33s; opacity: 1; transform: translateX(0); }
     .mobile-menu.open .mobile-menu-links li:nth-child(5) { transition-delay: 0.39s; opacity: 1; transform: translateX(0); }
     .mobile-menu.open .mobile-menu-links li:nth-child(6) { transition-delay: 0.45s; opacity: 1; transform: translateX(0); }
+    .mobile-menu.open .mobile-menu-links li:nth-child(7) { transition-delay: 0.51s; opacity: 1; transform: translateX(0); }
+    .mobile-menu.open .mobile-menu-links li:nth-child(8) { transition-delay: 0.57s; opacity: 1; transform: translateX(0); }
     .mobile-menu-links a {
       display: flex; align-items: center; justify-content: space-between;
       padding: 22px 0;
@@ -442,6 +444,54 @@
     .service-name { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--text); margin-bottom: 16px; }
     .service-desc { font-size: 0.8rem; line-height: 1.9; color: var(--muted); }
 
+    /* ── CALENDLY BUTTON ── */
+    .calendly-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 32px;
+      margin-bottom: 8px;
+      padding: 20px 24px;
+      background: var(--gold);
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .calendly-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .calendly-btn-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .calendly-btn-left div {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .calendly-btn-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(10,10,10,0.6);
+      font-family: var(--font-sans);
+    }
+    .calendly-btn-value {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--black);
+      font-family: var(--font-sans);
+    }
+    .calendly-btn-arrow {
+      font-size: 1.1rem;
+      color: var(--black);
+      transition: transform 0.3s;
+    }
+    .calendly-btn:hover .calendly-btn-arrow { transform: translateX(4px); }
+
+    @media (max-width: 500px) {
+      .calendly-btn-value { font-size: 0.78rem; }
+    }
+
     /* ── CONTACT ── */
     .contact-section { background: var(--surface); border-top: 1px solid var(--border); }
     .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -641,7 +691,7 @@
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
     }
 
@@ -1005,28 +1055,457 @@
       nav { padding: 16px clamp(16px, 4vw, 24px); }
     }
 
-    /* ── SEO TEXT BLOCK ── */
-    .seo-text-block {
-      background: #0a0a0a;
-      padding: 20px 60px 0;
-      border-top: 1px solid #242424;
+    /* ── WHY WORK WITH ME ── */
+    .why-section {
+      background: var(--charcoal);
+      border-top: 1px solid var(--border);
     }
-    .seo-text-block p {
-      font-size: 0.65rem;
-      color: #2a2520;
+
+    .why-header {
+      max-width: 760px;
+      margin-bottom: 80px;
+    }
+    .why-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .why-heading em { font-style: italic; color: var(--gold-light); }
+    .why-hook {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 2;
+      max-width: 620px;
+    }
+    .why-hook strong { color: var(--text); font-weight: 500; }
+
+    .why-scenario {
+      background: rgba(201,169,110,0.04);
+      border-left: 2px solid var(--gold);
+      padding: 28px 32px;
+      margin: 48px 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 2;
+      font-style: italic;
+      max-width: 720px;
+    }
+    .why-scenario strong { color: var(--text); font-style: normal; font-weight: 500; }
+
+    .why-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      margin: 64px 0;
+    }
+    .why-point {
+      background: var(--surface);
+      padding: 40px 36px;
+      border-top: 1px solid var(--border);
+      transition: border-color 0.3s, background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-point:hover { border-color: var(--gold); background: #1a1a1a; }
+    .why-point-number {
+      font-family: var(--font-mono);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgba(201,169,110,0.08);
+      line-height: 1;
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      pointer-events: none;
+      transition: color 0.3s;
+    }
+    .why-point:hover .why-point-number { color: rgba(201,169,110,0.13); }
+    .why-point-icon {
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+      display: block;
+    }
+    .why-point-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .why-point-body {
+      font-size: 0.8rem;
+      color: var(--muted);
       line-height: 1.9;
-      max-width: 900px;
+    }
+    .why-point-body strong { color: var(--text); font-weight: 500; }
+
+    .why-closer {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 64px 0 0;
+    }
+    .why-closer-line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 32px;
+    }
+    .why-closer-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .why-closer-quote em { color: var(--gold-light); font-style: italic; }
+    .why-closer-body {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 2;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .why-points { grid-template-columns: 1fr; }
+      .why-point { padding: 32px 28px; }
+      .why-scenario { padding: 22px 24px; }
+      .why-header { margin-bottom: 48px; }
+      .why-closer { padding-top: 40px; }
+    }
+
+    /* ── PRICING ── */
+    .pricing-section { background: var(--black); border-top: 1px solid var(--border); }
+
+    .pricing-intro {
+      max-width: 680px;
+      margin-bottom: 56px;
+    }
+    .pricing-intro-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .pricing-intro-heading em { font-style: italic; color: var(--gold-light); }
+    .pricing-intro-sub {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    /* Toggle */
+    .pricing-toggle-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 56px;
+      border: 1px solid var(--border);
+      width: fit-content;
+    }
+    .pricing-toggle-btn {
+      background: none;
+      border: none;
+      padding: 14px 32px;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-family: var(--font-sans);
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      position: relative;
+    }
+    .pricing-toggle-btn.active {
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 500;
+    }
+    .pricing-toggle-btn:not(.active):hover { color: var(--text); }
+
+    /* Panels */
+    .pricing-panel { display: none; }
+    .pricing-panel.active { display: block; }
+
+    /* Sub-toggle for monthly tiers */
+    .pricing-tier-toggle {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 40px;
+    }
+    .pricing-tier-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 12px 28px;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-family: var(--font-sans);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .pricing-tier-btn.active {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,169,110,0.06);
+    }
+    .pricing-tier-btn:not(.active):hover { color: var(--text); border-color: var(--muted); }
+
+    .pricing-tier-panel { display: none; }
+    .pricing-tier-panel.active { display: block; }
+
+    /* Layout */
+    .pricing-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 3px;
+      align-items: start;
+    }
+
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .pricing-group {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 36px 40px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .pricing-group:hover { border-color: rgba(201,169,110,0.3); background: #1a1a1a; }
+
+    .pricing-group-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .pricing-group-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .pricing-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .pricing-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .pricing-item-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+    .pricing-item strong { color: var(--text); font-weight: 500; }
+    .pricing-badge {
+      display: inline-block;
+      font-size: 0.52rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--gold);
+      padding: 2px 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+    /* Card */
+    .pricing-card {
+      background: var(--surface);
+      border-top: 2px solid var(--gold);
+      padding: 48px 40px;
+      position: sticky;
+      top: 100px;
+    }
+    .pricing-card-tag {
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+    .pricing-card-name {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .pricing-card-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .pricing-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .pricing-price-main {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .pricing-price-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+    .pricing-price-note {
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .pricing-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
+    .pricing-guarantees {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .pricing-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .pricing-guarantee-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .pricing-cta {
+      display: block;
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+      padding: 16px 24px;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-family: var(--font-sans);
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .pricing-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .pricing-cta-sub {
+      margin-top: 14px;
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-align: center;
+      letter-spacing: 0.08em;
+    }
+
+    /* One-time layout (no feature list, just card) */
+    .pricing-onetime-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      align-items: start;
+    }
+    .pricing-onetime-left {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 48px 40px;
+      height: 100%;
+    }
+    .pricing-onetime-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .pricing-onetime-heading em { font-style: italic; color: var(--gold-light); }
+    .pricing-onetime-body {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 2;
+      margin-bottom: 16px;
+    }
+    .pricing-onetime-includes {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pricing-onetime-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .pricing-onetime-item strong { color: var(--text); font-weight: 500; }
+
+    @media (max-width: 1024px) {
+      .pricing-layout { grid-template-columns: 1fr; }
+      .pricing-onetime-layout { grid-template-columns: 1fr; }
+      .pricing-card { position: static; }
     }
     @media (max-width: 900px) {
-      .seo-text-block { padding: 16px 28px 0; }
+      .pricing-group { padding: 28px 24px; }
+      .pricing-card { padding: 36px 28px; }
+      .pricing-onetime-left { padding: 36px 28px; }
+      .pricing-intro { margin-bottom: 36px; }
+      .pricing-toggle-wrap { width: 100%; }
+      .pricing-toggle-btn { flex: 1; text-align: center; padding: 14px 16px; }
     }
+    @media (max-width: 500px) {
+      .pricing-tier-toggle { flex-direction: column; }
+      .pricing-tier-btn { text-align: center; }
+    }
+
+
   </style>
 </head>
 <body class="loading">
 
   <!-- INTRO LOADER -->
   <div id="loader">
-    <div class="loader-tag" id="loaderTag">Real Estate Web Developer</div>
+    <div class="loader-tag" id="loaderTag">Real Estate Full-Stack Developer</div>
     <div class="loader-name" id="loaderName">&nbsp;</div>
     <div class="loader-line" id="loaderLine"></div>
   </div>
@@ -1047,10 +1526,12 @@
       <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
       <li><a href="#services" onclick="closeMenu()">Services</a></li>
       <li><a href="#process" onclick="closeMenu()">Process</a></li>
+      <li><a href="#why" onclick="closeMenu()">Why Me</a></li>
+      <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
       <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
     <div class="drawer-footer">
-      <p><span>Olúwapámílérìn Ayọ̀midé</span>Real Estate Web Developer<br>Available for new projects.</p>
+      <p><span>Olúwapámílérìn Ayọ̀midé</span>Real Estate Full-Stack Developer<br>Available for new projects.</p>
     </div>
   </div>
 
@@ -1063,6 +1544,8 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
+      <li><a href="#why">Why Me</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -1074,9 +1557,9 @@
   <section class="hero">
     <div class="hero-bg-line"></div>
     <div class="hero-bg-line2"></div>
-    <p class="hero-label">Real Estate Web Developer</p>
+    <p class="hero-label">Real Estate Full-Stack Developer</p>
     <h1 class="hero-name">Olúwapámílérìn<br><em>Ayọ̀midé</em></h1>
-    <p class="hero-tagline">A real estate web developer building premium websites for realtors, property brands, and real estate teams worldwide — so you become the obvious choice before the first conversation even starts.</p>
+    <p class="hero-tagline">A real estate web developer building premium websites for realtors, property brands, and real estate teams worldwide, so you become the obvious choice before the first conversation even starts.</p>
     <div class="hero-cta">
       <a href="#work" class="btn-primary">View Work</a>
       <a href="#contact" class="btn-ghost">Let's Talk</a>
@@ -1118,8 +1601,8 @@
       </div>
       <div>
         <p class="about-body">A real estate web developer specialising exclusively in property websites. Every site I build is engineered around one goal: making serious buyers and sellers choose you before you even pick up the phone.</p>
-        <p class="about-body">I understand the real estate market, what high-value clients expect, and what separates the realtors who look established from the ones who do not. That understanding drives every technical decision I make — no matter where in the world you operate.</p>
-        <p class="about-body">If you are a real estate professional without a website, or with one that does not reflect your work, I build exactly what you need — from the first line of code to the day it goes live.</p>
+        <p class="about-body">I understand the real estate market, what high-value clients expect, and what separates the realtors who look established from the ones who do not. That understanding drives every technical decision I make, no matter where in the world you operate.</p>
+        <p class="about-body">If you are a real estate professional without a website, or with one that does not reflect your work, I build exactly what you need, from the first line of code to the day it goes live.</p>
       </div>
     </div>
   </section>
@@ -1259,15 +1742,47 @@
         <div class="ring-wrap">
           <svg class="ring-svg" viewBox="0 0 110 110">
             <circle class="ring-track" cx="55" cy="55" r="45"/>
-            <circle class="ring-fill" cx="55" cy="55" r="45" data-pct="75"/>
+            <circle class="ring-fill" cx="55" cy="55" r="45" data-pct="80"/>
           </svg>
           <div class="ring-center">
             <span class="ring-icon">⚡</span>
-            <span class="ring-pct" data-target="75">0%</span>
+            <span class="ring-pct" data-target="80">0%</span>
           </div>
         </div>
         <h3 class="skill-name">JavaScript</h3>
-        <p class="skill-desc">Interactive experiences, smooth animations, and dynamic functionality that bring sites to life.</p>
+        <p class="skill-desc">Dynamic functionality, smooth animations, real-time logic and interactive experiences built to perform.</p>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-card">
+        <div class="ring-wrap">
+          <svg class="ring-svg" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="45"/>
+            <circle class="ring-fill" cx="55" cy="55" r="45" data-pct="78"/>
+          </svg>
+          <div class="ring-center">
+            <span class="ring-icon">🐍</span>
+            <span class="ring-pct" data-target="78">0%</span>
+          </div>
+        </div>
+        <h3 class="skill-name">Python</h3>
+        <p class="skill-desc">Backend logic, automation, data handling and server-side functionality that powers everything under the hood.</p>
+      </div>
+
+      <!-- Firebase / Vercel -->
+      <div class="skill-card">
+        <div class="ring-wrap">
+          <svg class="ring-svg" viewBox="0 0 110 110">
+            <circle class="ring-track" cx="55" cy="55" r="45"/>
+            <circle class="ring-fill" cx="55" cy="55" r="45" data-pct="82"/>
+          </svg>
+          <div class="ring-center">
+            <span class="ring-icon">🔥</span>
+            <span class="ring-pct" data-target="82">0%</span>
+          </div>
+        </div>
+        <h3 class="skill-name">Firebase / Vercel</h3>
+        <p class="skill-desc">Real-time databases, user authentication, file storage and seamless deployment that gets sites live fast and keeps them running reliably.</p>
       </div>
 
       <!-- AI-Augmented -->
@@ -1308,7 +1823,7 @@
         </div>
         <div class="service-line"></div>
         <h3 class="service-name">Real Estate Specialisation</h3>
-        <p class="service-desc">Deep expertise in developing for property professionals. I know what buyers want to feel and what agents need to communicate. Trust, aspiration and clarity built into every page — at the code level.</p>
+        <p class="service-desc">Deep expertise in developing for property professionals. I know what buyers want to feel and what agents need to communicate. Trust, aspiration and clarity built into every page, at the code level.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">
@@ -1324,7 +1839,7 @@
         </div>
         <div class="service-line"></div>
         <h3 class="service-name">Website Rebuild</h3>
-        <p class="service-desc">Already have a site that feels outdated or underperforming? I will rebuild it from the ground up — modern, fast, and built to impress — without losing what makes your brand yours.</p>
+        <p class="service-desc">Already have a site that feels outdated or underperforming? I will rebuild it from the ground up, modern, fast, and built to impress, without losing what makes your brand yours.</p>
       </div>
     </div>
   </section>
@@ -1394,13 +1909,318 @@
     </div>
   </section>
 
+  <!-- WHY WORK WITH ME -->
+  <section id="why" class="why-section">
+    <div class="section-tag">Why Work With Me</div>
+
+    <div class="why-header reveal">
+      <h2 class="why-heading">Most real estate websites are<br><em>costing you money.</em></h2>
+      <p class="why-hook">Think about this.</p>
+    </div>
+
+    <div class="why-scenario reveal">
+      A buyer finds you on Instagram at 11pm. They are excited. They want to see your listings. They click your link and land on a generic page with no property details, no photos, no way to enquire without texting you directly.<br><br>
+      So they do not. They scroll on. <strong>They find someone else.</strong><br><br>
+      That happens every single day to realtors without the right website. Not because they are bad at their job, but because their online presence is not working while they sleep.
+    </div>
+
+    <div class="why-points reveal">
+
+      <div class="why-point">
+        <span class="why-point-number">01</span>
+        <span class="why-point-icon">🌙</span>
+        <h3 class="why-point-title">Leads while you sleep</h3>
+        <p class="why-point-body">Your listings live on dedicated pages with full photos, videos, pricing, specs and a contact form. A buyer can fall in love with a property at midnight and send you an enquiry without you lifting a finger. <strong>You wake up to a lead that is already warmed up.</strong></p>
+      </div>
+
+      <div class="why-point">
+        <span class="why-point-number">02</span>
+        <span class="why-point-icon">📊</span>
+        <h3 class="why-point-title">Know exactly what is working</h3>
+        <p class="why-point-body">Every time someone visits a listing, it is tracked. You can see exactly which properties are getting attention and which ones need more push. <strong>No more guessing what is working.</strong></p>
+      </div>
+
+      <div class="why-point">
+        <span class="why-point-number">03</span>
+        <span class="why-point-icon">📧</span>
+        <h3 class="why-point-title">You own your audience</h3>
+        <p class="why-point-body">When a buyer visits your site, a subtle popup invites them to join your list. Now you have their email. When you drop a new listing, you have a ready audience to notify. <strong>You own that relationship. Instagram does not.</strong></p>
+      </div>
+
+      <div class="why-point">
+        <span class="why-point-number">04</span>
+        <span class="why-point-icon">🏆</span>
+        <h3 class="why-point-title">Every sale becomes social proof</h3>
+        <p class="why-point-body">When you get an offer accepted, you mark the property Sold right from your admin panel. It shows up on your site with a bold Sold banner. That is not just a listing update. <strong>That is proof that you close deals.</strong></p>
+      </div>
+
+      <div class="why-point">
+        <span class="why-point-number">05</span>
+        <span class="why-point-icon">📱</span>
+        <h3 class="why-point-title">Listings that look good when shared</h3>
+        <p class="why-point-body">Your listings look stunning when shared on WhatsApp, Instagram or Facebook, with a proper photo, title and description pulled automatically. <strong>Not a broken link. Not a blank preview.</strong></p>
+      </div>
+
+      <div class="why-point">
+        <span class="why-point-number">06</span>
+        <span class="why-point-icon">🔍</span>
+        <h3 class="why-point-title">Show up when they search for you</h3>
+        <p class="why-point-body">When someone asks a friend "do you know a good realtor?" and your name comes up, they Google you. They find a website that looks like you mean business. <strong>And they reach out.</strong></p>
+      </div>
+
+    </div>
+
+    <div class="why-closer reveal">
+      <div class="why-closer-line"></div>
+      <p class="why-closer-quote">The realtors winning right now are not necessarily <em>the best agents.</em></p>
+      <p class="why-closer-body">They are the ones who show up professionally everywhere a buyer looks. They are the ones capturing leads while their competitors are waiting for referrals. They are the ones whose listings get shared because they look good enough to share.<br><br>You already do the hard part: finding properties, negotiating deals, closing.<br><br>I just make sure the internet is doing its job for you while you do yours.</p>
+    </div>
+
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="pricing-section">
+    <div class="section-tag">Pricing</div>
+
+    <div class="pricing-intro reveal">
+      <h2 class="pricing-intro-heading">Choose how you want<br>to work with <em>me.</em></h2>
+      <p class="pricing-intro-sub">Every website is custom built from scratch. Pick the model that works best for your business.</p>
+    </div>
+
+    <!-- Main toggle: One-time vs Monthly -->
+    <div class="pricing-toggle-wrap reveal">
+      <button class="pricing-toggle-btn active" onclick="switchPricingTab('onetime', this)">One-time Build</button>
+      <button class="pricing-toggle-btn" onclick="switchPricingTab('monthly', this)">Monthly Subscription</button>
+    </div>
+
+    <!-- ONE-TIME PANEL -->
+    <div class="pricing-panel active" id="panel-onetime">
+      <div class="pricing-onetime-layout reveal">
+
+        <div class="pricing-onetime-left">
+          <h3 class="pricing-onetime-heading">Pay once.<br>Own it <em>forever.</em></h3>
+          <p class="pricing-onetime-body">You get a fully custom real estate website built from scratch, delivered and handed over to you completely. No monthly fees, no ongoing dependency. It is yours.</p>
+          <p class="pricing-onetime-body">This is for professionals who want full ownership and have the means to manage their own hosting and updates going forward.</p>
+          <div class="pricing-onetime-includes">
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Custom designed pages</strong> including Homepage, Listings, Property Detail, About and Contact</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Fast loading and professional</strong> with clean code</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Unlimited property listings</strong> with no caps</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Password-protected admin panel</strong> to manage listings without touching code</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Photo and video uploads</strong> for every listing</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>NEW, Sold and Rented badges</strong> to manage and showcase your listings</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Lead capture popup</strong> and enquiry forms on every property page</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Export your leads</strong> as a spreadsheet anytime</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> so Google can find you</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Open Graph tags</strong> for professional sharing on WhatsApp, Instagram and Facebook</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Listing view counts, enquiry tracking</strong> and analytics per property</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Share button, mortgage calculator, WhatsApp button</strong> and back to top navigation</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Complete handover</strong> with all source files</span></div>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-tag">One-time Build</div>
+          <div class="pricing-card-name">Full Ownership</div>
+          <div class="pricing-card-desc">Every feature. One payment. Yours to keep forever with no subscriptions and no recurring fees.</div>
+          <div class="pricing-price-row">
+            <div class="pricing-price-main">$3,000</div>
+          </div>
+          <div class="pricing-price-note">One payment. Yours to keep.</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-guarantees">
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Every feature included</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No monthly fees ever</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Full source code delivered</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>You own it completely</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>All I need is 15 minutes of your time</div>
+          </div>
+          <a href="#contact" class="pricing-cta">Get Started</a>
+          <p class="pricing-cta-sub">Reach out today and let's get started.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MONTHLY PANEL -->
+    <div class="pricing-panel" id="panel-monthly">
+
+      <!-- Sub-toggle: Core vs Full -->
+      <div class="pricing-tier-toggle reveal">
+        <button class="pricing-tier-btn active" onclick="switchTier('core', this)">Core</button>
+        <button class="pricing-tier-btn" onclick="switchTier('full', this)">Full</button>
+      </div>
+
+      <!-- CORE TIER -->
+      <div class="pricing-tier-panel active" id="tier-core">
+        <div class="pricing-layout reveal">
+          <div class="pricing-features">
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">The Website</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Custom designed pages</strong> including Homepage, Listings, About and Contact</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Fast loading, clean and professional</strong></span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span>Built specifically for <strong>real estate</strong>, not a generic business site</span></div>
+              </div>
+            </div>
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">Listings</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Up to 20 property listings</strong></span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Photo uploads</strong> for every listing</span></div>
+              </div>
+            </div>
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">Visibility</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> so Google can find you</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Open Graph tags</strong> so your listings look professional when shared on WhatsApp, Instagram and Facebook</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-card-tag">Monthly Subscription</div>
+            <div class="pricing-card-name">Core</div>
+            <div class="pricing-card-desc">Everything you need to get online and start attracting clients. Clean, fast and professional.</div>
+            <div class="pricing-price-row">
+              <div class="pricing-price-main">$199</div>
+              <div class="pricing-price-sub">/ month</div>
+            </div>
+            <div class="pricing-price-note">You pay nothing until you see it live with your listings and your branding.</div>
+            <div class="pricing-divider"></div>
+            <div class="pricing-guarantees">
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No contracts</div>
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Cancel anytime</div>
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>All I need is 15 minutes of your time</div>
+            </div>
+            <a href="#contact" class="pricing-cta">Start with Core</a>
+            <p class="pricing-cta-sub">Reach out today and let's get started.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FULL TIER -->
+      <div class="pricing-tier-panel" id="tier-full">
+        <div class="pricing-layout reveal">
+          <div class="pricing-features">
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">The Website</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Custom designed pages</strong> including Homepage, Listings, Property Detail, About and Contact</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Fast loading, clean and professional</strong> with no bloat</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span>Built specifically for <strong>real estate</strong>, not a generic business site</span></div>
+              </div>
+            </div>
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">Property Management</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Unlimited property listings</strong> with no caps</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Password-protected admin panel</strong> to add, edit and delete listings without touching any code</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Photo and video uploads</strong> for every listing</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>NEW badge</strong> appears automatically on fresh listings and disappears after 24 hours <span class="pricing-badge">Auto</span></span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Sold and Rented badges</strong> to showcase your track record</span></div>
+              </div>
+            </div>
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">Lead Generation</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Lead capture popup</strong> to collect buyer emails directly from your site</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Quick enquiry form</strong> on every property page</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span>All enquiries and leads <strong>saved in your admin panel</strong></span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Export your leads</strong> as a spreadsheet anytime</span></div>
+              </div>
+            </div>
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">Visibility</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> so Google can find you</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Open Graph tags</strong> so listings look professional on WhatsApp, Instagram and Facebook</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Custom sitemap</strong> so search engines index every page</span></div>
+              </div>
+            </div>
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">Analytics</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span>See <strong>how many times each listing has been viewed</strong></span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Track enquiries</strong> per property</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span>Know exactly <strong>which listings are getting the most attention</strong></span></div>
+              </div>
+            </div>
+
+            <div class="pricing-group">
+              <div class="pricing-group-label">Extra Features</div>
+              <div class="pricing-items">
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Share button</strong> on every property page</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mortgage calculator</strong> for buyers</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>WhatsApp button</strong> for instant contact</span></div>
+                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Back to top button</strong> for smooth navigation</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-card-tag">Monthly Subscription</div>
+            <div class="pricing-card-name">Full</div>
+            <div class="pricing-card-desc">The complete platform. Admin panel, lead generation, analytics, and every feature your real estate business needs to grow.</div>
+            <div class="pricing-price-row">
+              <div class="pricing-price-main">$350</div>
+              <div class="pricing-price-sub">/ month</div>
+            </div>
+            <div class="pricing-price-note">You pay nothing until you see it live with your listings, your photos and your branding.</div>
+            <div class="pricing-divider"></div>
+            <div class="pricing-guarantees">
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No contracts</div>
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Cancel anytime</div>
+              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>All I need is 15 minutes of your time</div>
+            </div>
+            <a href="#contact" class="pricing-cta">Start with Full</a>
+            <p class="pricing-cta-sub">Reach out today and let's get started.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="contact-section">
     <div class="contact-inner reveal">
       <div>
         <h2 class="contact-heading">Let's build your <em>dream website.</em></h2>
         <p class="contact-sub">Ready to give your real estate business the website it deserves? Reach out through any of the channels below and let's get to work.</p>
-        <p class="contact-pricing">Pricing is <em>project-based.</em> Let's talk about what you need.</p>
+
+        <a href="https://calendly.com/lerin1" target="_blank" rel="noopener" class="calendly-btn reveal">
+          <div class="calendly-btn-left">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="4" width="18" height="18" rx="2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <path d="M3 9h18" stroke="#0a0a0a" stroke-width="1.5"/>
+              <path d="M8 2v4M16 2v4" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 14h4M7 17h2" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <span class="calendly-btn-label">Prefer to talk first?</span>
+              <span class="calendly-btn-value">Book a free 15-minute discovery call</span>
+            </div>
+          </div>
+          <span class="calendly-btn-arrow">→</span>
+        </a>
 
         <div class="contact-channels">
           <a href="https://wa.me/2349051713217" target="_blank" rel="noopener" class="contact-channel">
@@ -1417,7 +2237,7 @@
             <span class="channel-arrow">→</span>
           </a>
 
-          <a href="/cdn-cgi/l/email-protection#c1ada4b3a8afb5a0adaa81a6aca0a8adefa2aeac" class="contact-channel">
+          <a href="mailto:lerintalk@gmail.com" class="contact-channel">
             <div class="channel-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                 <rect x="2" y="4" width="20" height="16" rx="2" stroke="#c9a96e" stroke-width="1.5"/>
@@ -1426,7 +2246,7 @@
             </div>
             <div class="channel-info">
               <span class="channel-label">Email</span>
-              <span class="channel-value"><span class="__cf_email__" data-cfemail="f19d9483989f85909d9ab1969c90989ddf929e9c">[email&#160;protected]</span></span>
+              <span class="channel-value">lerintalk@gmail.com</span>
             </div>
             <span class="channel-arrow">→</span>
           </a>
@@ -1458,10 +2278,7 @@
     </div>
   </section>
 
-  <!-- ── SEO TEXT (visible to crawlers, styled subtle) ── -->
-  <div class="seo-text-block">
-    <p>Olúwapámílérìn Ayọ̀midé is a real estate web developer building custom, high-converting websites for realtors, property agents, real estate teams, and luxury property brands worldwide. Services include real estate website development, property landing pages, and full website rebuilds for agents across the US, UK, Nigeria, Canada, Australia, and beyond.</p>
-  </div>
+
 
   <!-- FOOTER -->
   <footer>
@@ -1650,6 +2467,20 @@
       });
     }, { threshold: 0.3 });
     document.querySelectorAll('.skill-card').forEach(card => ringObs.observe(card));
+
+    // ── Pricing toggles ──
+    function switchPricingTab(tab, btn) {
+      document.querySelectorAll('.pricing-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.pricing-toggle-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('panel-' + tab).classList.add('active');
+      btn.classList.add('active');
+    }
+    function switchTier(tier, btn) {
+      document.querySelectorAll('.pricing-tier-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.pricing-tier-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tier-' + tier).classList.add('active');
+      btn.classList.add('active');
+    }
 
     // ── Scroll reveal ──
     const obs = new IntersectionObserver(entries => {
