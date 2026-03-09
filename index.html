@@ -1997,56 +1997,82 @@
     <div class="section-tag">Pricing</div>
 
     <div class="pricing-intro reveal">
-      <h2 class="pricing-intro-heading">Choose how you want<br>to work with <em>me.</em></h2>
-      <p class="pricing-intro-sub">Every website is custom built from scratch. Pick the model that works best for your business.</p>
+      <h2 class="pricing-intro-heading">Simple pricing.<br><em>No surprises.</em></h2>
+      <p class="pricing-intro-sub">Every plan starts with a one-time setup fee. You pay 50% upfront to kick off the project and the remaining 50% when the site goes live. Then a fixed monthly fee keeps it running, updated and managed by me.</p>
     </div>
 
-    <!-- Main toggle: One-time vs Monthly -->
+    <!-- Toggle: Starter / Pro / Buyout -->
     <div class="pricing-toggle-wrap reveal">
-      <button class="pricing-toggle-btn active" onclick="switchPricingTab('onetime', this)">One-time Build</button>
-      <button class="pricing-toggle-btn" onclick="switchPricingTab('monthly', this)">Monthly Subscription</button>
+      <button class="pricing-toggle-btn active" onclick="switchPricingTab('starter', this)">Starter</button>
+      <button class="pricing-toggle-btn" onclick="switchPricingTab('pro', this)">Pro</button>
+      <button class="pricing-toggle-btn" onclick="switchPricingTab('buyout', this)">Full Ownership</button>
     </div>
 
-    <!-- ONE-TIME PANEL -->
-    <div class="pricing-panel active" id="panel-onetime">
-      <div class="pricing-onetime-layout reveal">
+    <!-- STARTER PANEL -->
+    <div class="pricing-panel active" id="panel-starter">
+      <div class="pricing-layout reveal">
+        <div class="pricing-features">
 
-        <div class="pricing-onetime-left">
-          <h3 class="pricing-onetime-heading">Pay once.<br>Own it <em>forever.</em></h3>
-          <p class="pricing-onetime-body">You get a fully custom real estate website built from scratch, delivered and handed over to you completely. No monthly fees, no ongoing dependency. It is yours.</p>
-          <p class="pricing-onetime-body">This is for professionals who want full ownership and have the means to manage their own hosting and updates going forward.</p>
-          <div class="pricing-onetime-includes">
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Custom designed pages</strong> including Homepage, Listings, Property Detail, About and Contact</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Fast loading and professional</strong> with clean code</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Unlimited property listings</strong> with no caps</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Password-protected admin panel</strong> to manage listings without touching code</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Photo and video uploads</strong> for every listing</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>NEW, Sold and Rented badges</strong> to manage and showcase your listings</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Lead capture popup</strong> and enquiry forms on every property page</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Export your leads</strong> as a spreadsheet anytime</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> so Google can find you</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Open Graph tags</strong> for professional sharing on WhatsApp, Instagram and Facebook</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Listing view counts, enquiry tracking</strong> and analytics per property</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Share button, mortgage calculator, WhatsApp button</strong> and back to top navigation</span></div>
-            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Complete handover</strong> with all source files</span></div>
+          <div class="pricing-group">
+            <div class="pricing-group-label">The Website</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>4 custom designed pages</strong> — Home, Listings, About and Contact</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Fast loading, clean and professional</strong></span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span>Built specifically for <strong>real estate</strong>, not a generic business site</span></div>
+            </div>
           </div>
+
+          <div class="pricing-group">
+            <div class="pricing-group-label">Listings</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Up to 20 property listings</strong></span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Photo uploads</strong> for every listing</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>WhatsApp button</strong> and enquiry forms on every listing</span></div>
+            </div>
+          </div>
+
+          <div class="pricing-group">
+            <div class="pricing-group-label">Visibility</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> so Google can find you</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Open Graph tags</strong> so listings look professional on WhatsApp, Instagram and Facebook</span></div>
+            </div>
+          </div>
+
+          <div class="pricing-group">
+            <div class="pricing-group-label">Managed for You</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Hosted on my infrastructure</strong> with your own custom domain</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Ongoing maintenance</strong> and updates handled by me</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span>Site comes down if you cancel. <strong>Upgrade to Full Ownership anytime.</strong></span></div>
+            </div>
+          </div>
+
         </div>
 
         <div class="pricing-card">
-          <div class="pricing-card-tag">One-time Build</div>
-          <div class="pricing-card-name">Full Ownership</div>
-          <div class="pricing-card-desc">You get the complete source code, set up under your own accounts on GitHub, Firebase and Vercel. It is yours entirely. No monthly fees, no dependency on me, no risk of losing it. Host it yourself, update it yourself, or hire anyone you want to maintain it.</div>
+          <div class="pricing-card-tag">Starter Plan</div>
+          <div class="pricing-card-name">Get Online Fast</div>
+          <div class="pricing-card-desc">Everything you need to establish a professional online presence and start attracting serious buyers. Clean, fast and built exclusively for real estate.</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-monthly-label">One-time setup fee</div>
           <div class="pricing-price-row">
-            <div class="pricing-price-main">$5,000</div>
+            <div class="pricing-price-main">$997</div>
           </div>
-          <div class="pricing-price-note">One payment. Yours to keep.</div>
+          <div class="pricing-price-note">50% due upfront to begin. Remaining 50% due when the site goes live.</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-monthly-label">Then monthly</div>
+          <div class="pricing-price-row">
+            <div class="pricing-price-main">$299</div>
+            <div class="pricing-price-sub">/ month</div>
+          </div>
+          <div class="pricing-price-note">Hosting, maintenance and updates. Cancel anytime.</div>
           <div class="pricing-divider"></div>
           <div class="pricing-guarantees">
-            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Every feature included</div>
-            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No monthly fees ever</div>
-            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Full source code delivered</div>
-            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>You own it completely</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>50% upfront, 50% on launch</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Pay month to month, no long-term commitment</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
             <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>All I need is 15 minutes of your time</div>
           </div>
           <a href="#contact" class="pricing-cta">Get Started</a>
@@ -2056,161 +2082,153 @@
       </div>
     </div>
 
-    <!-- MONTHLY PANEL -->
-    <div class="pricing-panel" id="panel-monthly">
+    <!-- PRO PANEL -->
+    <div class="pricing-panel" id="panel-pro">
+      <div class="pricing-layout reveal">
+        <div class="pricing-features">
 
-      <!-- Sub-toggle: Core vs Full -->
-      <div class="pricing-tier-toggle reveal">
-        <button class="pricing-tier-btn active" onclick="switchTier('core', this)">Core</button>
-        <button class="pricing-tier-btn" onclick="switchTier('full', this)">Full</button>
-      </div>
-
-      <!-- CORE TIER -->
-      <div class="pricing-tier-panel active" id="tier-core">
-        <div class="pricing-layout reveal">
-          <div class="pricing-features">
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">The Website</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Custom designed pages</strong> including Homepage, Listings, About and Contact</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Fast loading, clean and professional</strong></span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span>Built specifically for <strong>real estate</strong>, not a generic business site</span></div>
-              </div>
+          <div class="pricing-group">
+            <div class="pricing-group-label">The Website</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>6 custom designed pages</strong> — Home, Listings, Property Detail, About, Services and Contact</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Fast loading, clean and professional</strong> with no bloat</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span>Built specifically for <strong>real estate</strong>, not a generic business site</span></div>
             </div>
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">Listings</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Up to 20 property listings</strong></span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Photo uploads</strong> for every listing</span></div>
-              </div>
-            </div>
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">Visibility</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> so Google can find you</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Open Graph tags</strong> so your listings look professional when shared on WhatsApp, Instagram and Facebook</span></div>
-              </div>
-            </div>
-
           </div>
 
-          <div class="pricing-card">
-            <div class="pricing-card-tag">Monthly Subscription</div>
-            <div class="pricing-card-name">Core</div>
-            <div class="pricing-card-desc">Your site lives on my infrastructure, fully managed and kept running by me. You get your own domain, your own listings and your own branding. Cancel anytime — though if you do, the site comes down. Want to keep it? Upgrade to the one-time build.</div>
-            <div class="pricing-price-row">
-              <div class="pricing-price-main">$349</div>
-              <div class="pricing-price-sub">/ month</div>
+          <div class="pricing-group">
+            <div class="pricing-group-label">Property Management</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Unlimited property listings</strong> with no caps</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Password-protected admin panel</strong> to add, edit and delete listings without touching any code</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Photo and video uploads</strong> for every listing</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>NEW badge</strong> appears automatically on fresh listings and disappears after 24 hours <span class="pricing-badge">Auto</span></span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Sold and Rented badges</strong> to showcase your track record</span></div>
             </div>
-            <div class="pricing-price-note">You pay nothing until you see it live with your listings and your branding.</div>
-            <div class="pricing-divider"></div>
-            <div class="pricing-guarantees">
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Pay month to month, no long-term commitment</div>
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Cancel anytime</div>
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>All I need is 15 minutes of your time</div>
-            </div>
-            <a href="#contact" class="pricing-cta">Start with Core</a>
-            <p class="pricing-cta-sub">Reach out today and let's get started.</p>
           </div>
 
-        </div>
-      </div>
-
-      <!-- FULL TIER -->
-      <div class="pricing-tier-panel" id="tier-full">
-        <div class="pricing-layout reveal">
-          <div class="pricing-features">
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">The Website</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Custom designed pages</strong> including Homepage, Listings, Property Detail, About and Contact</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mobile responsive</strong> on every screen size</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Fast loading, clean and professional</strong> with no bloat</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span>Built specifically for <strong>real estate</strong>, not a generic business site</span></div>
-              </div>
+          <div class="pricing-group">
+            <div class="pricing-group-label">Lead Generation</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Lead capture popup</strong> with 8-second delay and 7-day dismissal memory</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Enquiry form and Schedule Tour tab</strong> on every property page</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Push notifications</strong> the moment a new lead comes in</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span>All leads <strong>saved in your admin panel</strong> with CSV export</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Newsletter system</strong> to grow and own your audience</span></div>
             </div>
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">Property Management</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Unlimited property listings</strong> with no caps</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Password-protected admin panel</strong> to add, edit and delete listings without touching any code</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Photo and video uploads</strong> for every listing</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>NEW badge</strong> appears automatically on fresh listings and disappears after 24 hours <span class="pricing-badge">Auto</span></span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Sold and Rented badges</strong> to showcase your track record</span></div>
-              </div>
-            </div>
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">Lead Generation</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Lead capture popup</strong> to collect buyer emails directly from your site</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Quick enquiry form</strong> on every property page</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span>All enquiries and leads <strong>saved in your admin panel</strong></span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Export your leads</strong> as a spreadsheet anytime</span></div>
-              </div>
-            </div>
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">Visibility</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> so Google can find you</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Open Graph tags</strong> so listings look professional on WhatsApp, Instagram and Facebook</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Custom sitemap</strong> so search engines index every page</span></div>
-              </div>
-            </div>
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">Analytics</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span>See <strong>how many times each listing has been viewed</strong></span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Track enquiries</strong> per property</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span>Know exactly <strong>which listings are getting the most attention</strong></span></div>
-              </div>
-            </div>
-
-            <div class="pricing-group">
-              <div class="pricing-group-label">Extra Features</div>
-              <div class="pricing-items">
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Share button</strong> on every property page</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mortgage calculator</strong> for buyers</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>WhatsApp button</strong> for instant contact</span></div>
-                <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Back to top button</strong> for smooth navigation</span></div>
-              </div>
-            </div>
-
           </div>
 
-          <div class="pricing-card">
-            <div class="pricing-card-tag">Monthly Subscription</div>
-            <div class="pricing-card-name">Full</div>
-            <div class="pricing-card-desc">The complete platform, fully hosted and managed by me. Your own domain, admin panel, leads and analytics — all running on my infrastructure. Cancel anytime, though the site comes down if you do. Want permanent ownership? Switch to the one-time build.</div>
-            <div class="pricing-price-row">
-              <div class="pricing-price-main">$499</div>
-              <div class="pricing-price-sub">/ month</div>
+          <div class="pricing-group">
+            <div class="pricing-group-label">Visibility</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Full SEO optimisation</strong> on all 6 pages</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Dynamic SEO per listing</strong> so Google indexes every property individually</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Open Graph and Twitter Card tags</strong> for stunning social sharing</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Sitemap and robots.txt</strong> for complete search engine coverage</span></div>
             </div>
-            <div class="pricing-price-note">You pay nothing until you see it live with your listings, your photos and your branding.</div>
-            <div class="pricing-divider"></div>
-            <div class="pricing-guarantees">
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Pay month to month, no long-term commitment</div>
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Cancel anytime</div>
-              <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>All I need is 15 minutes of your time</div>
+          </div>
+
+          <div class="pricing-group">
+            <div class="pricing-group-label">Analytics</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>View counts per listing</strong> so you know what is getting attention</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Enquiry tracking per property</strong> with bar chart analytics</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Newsletter subscriber count</strong> and CSV export</span></div>
             </div>
-            <a href="#contact" class="pricing-cta">Start with Full</a>
-            <p class="pricing-cta-sub">Reach out today and let's get started.</p>
+          </div>
+
+          <div class="pricing-group">
+            <div class="pricing-group-label">Extra Features</div>
+            <div class="pricing-items">
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Share button</strong> on every property page</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Mortgage calculator</strong> for buyers</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Google Maps embed</strong> on every property page</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Similar properties</strong> shown at the bottom of every listing</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Global CDN hosting</strong> so your site loads fast from anywhere in the world</span></div>
+            </div>
           </div>
 
         </div>
-      </div>
 
+        <div class="pricing-card">
+          <div class="pricing-card-tag">Pro Plan</div>
+          <div class="pricing-card-name">The Full Platform</div>
+          <div class="pricing-card-desc">The complete real estate platform. Admin panel, lead generation, push notifications, analytics, newsletter system and every feature your business needs to grow. Fully managed by me.</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-monthly-label">One-time setup fee</div>
+          <div class="pricing-price-row">
+            <div class="pricing-price-main">$1,997</div>
+          </div>
+          <div class="pricing-price-note">50% due upfront to begin. Remaining 50% due when the site goes live.</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-monthly-label">Then monthly</div>
+          <div class="pricing-price-row">
+            <div class="pricing-price-main">$499</div>
+            <div class="pricing-price-sub">/ month</div>
+          </div>
+          <div class="pricing-price-note">Hosting, maintenance and updates. Cancel anytime.</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-guarantees">
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>50% upfront, 50% on launch</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Pay month to month, no long-term commitment</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>All I need is 15 minutes of your time</div>
+          </div>
+          <a href="#contact" class="pricing-cta">Get Started</a>
+          <p class="pricing-cta-sub">Reach out today and let's get started.</p>
+        </div>
+
+      </div>
     </div>
+
+    <!-- BUYOUT PANEL -->
+    <div class="pricing-panel" id="panel-buyout">
+      <div class="pricing-onetime-layout reveal">
+
+        <div class="pricing-onetime-left">
+          <h3 class="pricing-onetime-heading">Pay once.<br>Own it <em>forever.</em></h3>
+          <p class="pricing-onetime-body">You get the complete platform built from scratch and set up under your own accounts. Full source code delivered. No monthly fees, no dependency on me, no risk of losing it.</p>
+          <p class="pricing-onetime-body">This is for professionals who want complete ownership and control from day one.</p>
+          <div class="pricing-onetime-includes">
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>6 custom designed pages</strong> including Property Detail, Services and full listing gallery</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Unlimited property listings</strong> with no caps ever</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Password-protected admin panel</strong> to manage everything without touching code</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Photo and video uploads</strong> via Cloudinary CDN</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>NEW, Sold and Rented badges</strong> with automatic 24-hour logic</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Lead capture, enquiry forms, Schedule Tour tab</strong> and push notifications</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Newsletter system</strong> with subscriber management and CSV export</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Built-in analytics</strong> with bar charts per listing</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Dynamic SEO per listing</strong> so Google indexes every property</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Google Maps, mortgage calculator, share button</strong> and similar properties</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Full source code</strong> set up under your own GitHub, Supabase and Vercel accounts</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Complete handover</strong> with documentation</span></div>
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-tag">Full Ownership</div>
+          <div class="pricing-card-name">Yours Forever</div>
+          <div class="pricing-card-desc">Every feature from the Pro plan, delivered as source code and set up under your own accounts. No monthly fees ever. Host it yourself, update it yourself, or hire anyone you want.</div>
+          <div class="pricing-price-row">
+            <div class="pricing-price-main">$8,000</div>
+          </div>
+          <div class="pricing-price-note">50% due upfront to begin. Remaining 50% due on delivery.</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-guarantees">
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Every feature included</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No monthly fees ever</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Full source code delivered</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Set up under your own accounts</div>
+            <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>You own it completely</div>
+          </div>
+          <a href="#contact" class="pricing-cta">Get Started</a>
+          <p class="pricing-cta-sub">Reach out today and let's get started.</p>
+        </div>
+
+      </div>
+    </div>
+
   </section>
 
   <!-- CONTACT -->
