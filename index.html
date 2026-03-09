@@ -422,7 +422,7 @@
     }
 
     /* ── SERVICES ── */
-    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
     .service-card {
       background: var(--surface); padding: 48px 36px;
       border-top: 1px solid var(--border);
@@ -1822,30 +1822,52 @@
   <section id="services">
     <div class="section-tag">Services</div>
     <div class="services-grid reveal">
+
       <div class="service-card">
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="4" width="28" height="20" rx="2" stroke="#c9a96e" stroke-width="1.2"/><path d="M2 9h28" stroke="#c9a96e" stroke-width="1.2"/><circle cx="6" cy="6.5" r="1" fill="#c9a96e"/><circle cx="10" cy="6.5" r="1" fill="#c9a96e"/><circle cx="14" cy="6.5" r="1" fill="#c9a96e"/><path d="M8 28h16" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/><path d="M16 24v4" stroke="#c9a96e" stroke-width="1.2"/></svg>
         </div>
         <div class="service-line"></div>
         <h3 class="service-name">Full-Stack Real Estate Platform</h3>
-        <p class="service-desc">A complete real estate web platform built from scratch. Public website, property listings, admin panel, lead management, analytics and newsletter system. Everything your real estate business needs in one place.</p>
+        <p class="service-desc">A complete real estate web platform built from scratch. Public website, property listings, home valuation tool, mortgage calculator, admin panel, lead management, analytics and newsletter system. Everything your real estate business needs in one place.</p>
       </div>
+
       <div class="service-card">
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="16" height="20" rx="1" stroke="#c9a96e" stroke-width="1.2"/><path d="M8 11h8M8 15h8M8 19h5" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/><path d="M18 2h8a2 2 0 012 2v20a2 2 0 01-2 2h-8" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
         <div class="service-line"></div>
         <h3 class="service-name">Admin Panel and CMS</h3>
-        <p class="service-desc">A fully custom, password-protected admin panel that lets you manage listings, upload photos and videos, track leads, export data and view analytics. No technical knowledge required. Built specifically for realtors.</p>
+        <p class="service-desc">A fully custom, password-protected admin panel that lets you manage listings, upload photos and videos, track leads, reply to enquiries, add private notes, export data and view analytics. No technical knowledge required. Built specifically for realtors.</p>
       </div>
+
       <div class="service-card">
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="2" stroke="#c9a96e" stroke-width="1.2"/><path d="M8 13h10M8 17h6M8 21h8" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/><rect x="20" y="13" width="6" height="8" rx="1" stroke="#c9a96e" stroke-width="1.2"/></svg>
         </div>
         <div class="service-line"></div>
         <h3 class="service-name">Lead Generation System</h3>
-        <p class="service-desc">Enquiry forms, schedule tour tabs, newsletter popups and push notifications all working together. Every lead is captured, stored and exportable. You own your audience completely, no reliance on social media.</p>
+        <p class="service-desc">Enquiry forms, schedule tour tabs, newsletter popups, push notifications and SMS alerts all working together. Every lead is captured, stored, scored and exportable. You own your audience completely, no reliance on social media.</p>
       </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 4h24v18H4z" stroke="#c9a96e" stroke-width="1.2" stroke-linejoin="round"/><path d="M4 8l12 8 12-8" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/><path d="M4 26h24" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="service-line"></div>
+        <h3 class="service-name">Email Marketing System</h3>
+        <p class="service-desc">Automated welcome emails, new listing alerts to your entire subscriber list, lead follow-up confirmation emails and newsletter blasts all built directly into your admin panel. Powered by Resend. Your audience hears from you without you lifting a finger.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="4" width="28" height="24" rx="2" stroke="#c9a96e" stroke-width="1.2"/><path d="M2 10h28" stroke="#c9a96e" stroke-width="1.2"/><circle cx="8" cy="7" r="1.5" fill="#c9a96e"/><circle cx="13" cy="7" r="1.5" fill="#c9a96e"/><path d="M8 16h6M8 21h10M18 16h6" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="service-line"></div>
+        <h3 class="service-name">Progressive Web App</h3>
+        <p class="service-desc">Your real estate platform converted into a fully installable PWA. Visitors can add it to their phone home screen like a native app — no App Store required. Faster load times, offline support and a premium feel that sets you apart from every competitor.</p>
+      </div>
+
       <div class="service-card">
         <div class="service-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 16l4 4 8-8" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8h16M4 12h12M4 16h4" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round"/><path d="M20 20l8-8M20 20h5M20 20v-5" stroke="#c9a96e" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1854,6 +1876,7 @@
         <h3 class="service-name">Website Rebuild</h3>
         <p class="service-desc">Already have a site that feels outdated or underperforming? I rebuild it from the ground up with a modern design, full backend and every feature your business needs, without losing what makes your brand yours.</p>
       </div>
+
     </div>
   </section>
 
@@ -2045,7 +2068,7 @@
             <div class="pricing-items">
               <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Hosted on my infrastructure</strong> with your own custom domain</span></div>
               <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Ongoing maintenance</strong> and updates handled by me</span></div>
-              <div class="pricing-item"><div class="pricing-item-dot"></div><span>Site comes down if you cancel. <strong>Upgrade to Full Ownership anytime.</strong></span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span>Your site runs on my infrastructure. <strong>Want to own it outright? Upgrade to Full Ownership anytime.</strong></span></div>
             </div>
           </div>
 
@@ -2146,6 +2169,7 @@
               <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Google Maps embed</strong> on every property page</span></div>
               <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Similar properties</strong> shown at the bottom of every listing</span></div>
               <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Global CDN hosting</strong> so your site loads fast from anywhere in the world</span></div>
+              <div class="pricing-item"><div class="pricing-item-dot"></div><span><strong>Progressive Web App</strong> — visitors can install your site on their phone like a native app, no App Store required <span class="pricing-badge">PWA</span></span></div>
             </div>
           </div>
 
@@ -2203,6 +2227,7 @@
             <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Google Maps, mortgage calculator, share button</strong> and similar properties</span></div>
             <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Full source code</strong> set up under your own GitHub, Supabase and Vercel accounts</span></div>
             <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Complete handover</strong> with documentation</span></div>
+            <div class="pricing-onetime-item"><div class="pricing-item-dot"></div><span><strong>Progressive Web App</strong> — installable on any phone, no App Store required</span></div>
           </div>
         </div>
 
