@@ -1213,297 +1213,74 @@
     }
 
     /* ── PRICING ── */
+    /* ── PRICING ── */
     .pricing-section { background: var(--black); border-top: 1px solid var(--border); }
 
-    .pricing-intro {
-      max-width: 680px;
-      margin-bottom: 56px;
-    }
-    .pricing-intro-heading {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 600;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
+    .pricing-intro { max-width: 560px; margin-bottom: 80px; }
+    .pricing-intro-heading { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; line-height: 1.2; margin-bottom: 20px; color: var(--text); }
     .pricing-intro-heading em { font-style: italic; color: var(--gold-light); }
-    .pricing-intro-sub {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 2;
-    }
+    .pricing-intro-sub { font-size: 0.88rem; color: var(--muted); line-height: 2; }
 
-    /* Toggle */
-    .pricing-toggle-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 56px;
-      border: 1px solid var(--border);
-      width: fit-content;
-    }
-    .pricing-toggle-btn {
-      background: none;
-      border: none;
-      padding: 14px 32px;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-family: var(--font-sans);
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-      position: relative;
-    }
-    .pricing-toggle-btn.active {
-      background: var(--gold);
-      color: var(--black);
-      font-weight: 500;
-    }
-    .pricing-toggle-btn:not(.active):hover { color: var(--text); }
-
-    /* Panels */
-    .pricing-panel { display: none; }
-    .pricing-panel.active { display: block; }
-
-    /* Sub-toggle for monthly tiers */
-    .pricing-tier-toggle {
-      display: flex;
-      gap: 3px;
-      margin-bottom: 40px;
-    }
-    .pricing-tier-btn {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 12px 28px;
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-family: var(--font-sans);
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .pricing-tier-btn.active {
-      border-color: var(--gold);
-      color: var(--gold);
-      background: rgba(201,169,110,0.06);
-    }
-    .pricing-tier-btn:not(.active):hover { color: var(--text); border-color: var(--muted); }
-
-    .pricing-tier-panel { display: none; }
-    .pricing-tier-panel.active { display: block; }
-
-    /* Layout */
-    .pricing-layout {
+    /* What affects price */
+    .pricing-factors {
       display: grid;
-      grid-template-columns: 1fr 380px;
+      grid-template-columns: repeat(3, 1fr);
       gap: 3px;
-      align-items: start;
+      margin-bottom: 3px;
     }
-
-    .pricing-features {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .pricing-group {
+    .pricing-factor {
       background: var(--surface);
       border-top: 1px solid var(--border);
-      padding: 36px 40px;
+      padding: 36px 32px;
       transition: border-color 0.3s, background 0.3s;
     }
-    .pricing-group:hover { border-color: rgba(201,169,110,0.3); background: #1a1a1a; }
-
-    .pricing-group-label {
-      font-size: 0.58rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .pricing-group-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .pricing-items {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .pricing-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-size: 0.82rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-    .pricing-item-dot {
-      width: 5px;
-      height: 5px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 7px;
-    }
-    .pricing-item strong { color: var(--text); font-weight: 500; }
-    .pricing-badge {
-      display: inline-block;
-      font-size: 0.52rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--black);
-      background: var(--gold);
-      padding: 2px 8px;
-      margin-left: 8px;
-      vertical-align: middle;
-      font-weight: 600;
-    }
-
-    /* Card */
-    .pricing-card {
-      background: var(--surface);
-      border-top: 2px solid var(--gold);
-      padding: 48px 40px;
-      position: sticky;
-      top: 100px;
-    }
-    .pricing-card-tag {
-      font-size: 0.58rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 32px;
-    }
-    .pricing-card-name {
+    .pricing-factor:hover { border-color: rgba(201,169,110,0.4); background: #1a1a1a; }
+    .pricing-factor-number {
       font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .pricing-card-desc {
-      font-size: 0.75rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-    .pricing-price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-    .pricing-price-main {
-      font-family: var(--font-serif);
-      font-size: 3rem;
+      font-size: 2.4rem;
       font-weight: 700;
       color: var(--gold);
+      opacity: 0.35;
       line-height: 1;
+      margin-bottom: 16px;
     }
-    .pricing-price-sub {
-      font-size: 0.85rem;
+    .pricing-factor-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+    }
+    .pricing-factor-desc {
+      font-size: 0.76rem;
       color: var(--muted);
-      font-weight: 300;
-    }
-    .pricing-price-note {
-      font-size: 0.72rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-    .pricing-divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-      margin: 24px 0;
-    }
-    .pricing-guarantees {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 32px;
-    }
-    .pricing-guarantee {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-    .pricing-guarantee-dot {
-      width: 4px;
-      height: 4px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .pricing-cta {
-      display: block;
-      background: var(--gold);
-      color: var(--black);
-      text-align: center;
-      padding: 16px 24px;
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-family: var(--font-sans);
-      text-decoration: none;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .pricing-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .pricing-cta-sub {
-      margin-top: 14px;
-      font-size: 0.65rem;
-      color: var(--muted);
-      text-align: center;
-      letter-spacing: 0.08em;
+      line-height: 1.8;
     }
 
-    /* One-time layout (no feature list, just card) */
-    .pricing-onetime-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3px;
-      align-items: start;
-    }
-    .pricing-onetime-left {
+    /* What's always included */
+    .pricing-always {
       background: var(--surface);
       border-top: 1px solid var(--border);
       padding: 48px 40px;
-      height: 100%;
+      margin-bottom: 3px;
     }
-    .pricing-onetime-heading {
-      font-family: var(--font-serif);
-      font-size: clamp(1.6rem, 3vw, 2.5rem);
-      font-weight: 600;
-      line-height: 1.3;
-      margin-bottom: 20px;
-      color: var(--text);
-    }
-    .pricing-onetime-heading em { font-style: italic; color: var(--gold-light); }
-    .pricing-onetime-body {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 2;
-      margin-bottom: 16px;
-    }
-    .pricing-onetime-includes {
-      margin-top: 32px;
+    .pricing-always-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
       display: flex;
-      flex-direction: column;
-      gap: 12px;
+      align-items: center;
+      gap: 14px;
     }
-    .pricing-onetime-item {
+    .pricing-always-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .pricing-always-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px 40px;
+    }
+    .pricing-always-item {
       display: flex;
       align-items: flex-start;
       gap: 12px;
@@ -1511,41 +1288,159 @@
       color: var(--muted);
       line-height: 1.6;
     }
-    .pricing-onetime-item strong { color: var(--text); font-weight: 500; }
+    .pricing-always-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+    .pricing-always-item strong { color: var(--text); font-weight: 500; }
+
+    /* Process steps */
+    .pricing-process {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-bottom: 3px;
+    }
+    .pricing-step {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 40px 32px;
+      position: relative;
+    }
+    .pricing-step-num {
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .pricing-step-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .pricing-step-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    /* CTA block */
+    .pricing-cta-block {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 3px;
+      align-items: stretch;
+    }
+    .pricing-cta-left {
+      background: var(--surface);
+      border-top: 2px solid var(--gold);
+      padding: 56px 48px;
+    }
+    .pricing-cta-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .pricing-cta-heading em { font-style: italic; color: var(--gold-light); }
+    .pricing-cta-body {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 2;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .pricing-cta-terms {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .pricing-cta-term {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .pricing-cta-term-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .pricing-cta-buttons { display: flex; align-items: center; gap: 12px; }
+    .pricing-main-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      padding: 18px 40px;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: var(--font-sans);
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .pricing-main-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .pricing-wa-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      color: #fff;
+      flex-shrink: 0;
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+    }
+    .pricing-wa-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
+    .pricing-cta-sub { margin-top: 14px; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; }
+
+    .pricing-cta-right {
+      background: #0f0f0f;
+      border-top: 1px solid var(--border);
+      padding: 56px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+    }
+    .pricing-cta-right-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .pricing-cta-range {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 2.2;
+    }
+    .pricing-cta-range strong { color: var(--text); font-size: 1.05rem; }
+    .pricing-cta-divider { width: 40px; height: 1px; background: var(--border); }
+    .pricing-cta-note {
+      font-size: 0.74rem;
+      color: var(--muted);
+      line-height: 1.9;
+    }
 
     @media (max-width: 1024px) {
-      .pricing-layout { grid-template-columns: 1fr; }
-      .pricing-onetime-layout { grid-template-columns: 1fr; }
-      .pricing-card { position: static; }
+      .pricing-cta-block { grid-template-columns: 1fr; }
     }
     @media (max-width: 900px) {
-      .pricing-group { padding: 28px 24px; }
-      .pricing-card { padding: 36px 28px; }
-      .pricing-onetime-left { padding: 36px 28px; }
-      .pricing-intro { margin-bottom: 36px; }
-      .pricing-toggle-wrap { width: 100%; }
-      .pricing-toggle-btn { flex: 1; text-align: center; padding: 14px 16px; }
+      .pricing-factors { grid-template-columns: 1fr; }
+      .pricing-process { grid-template-columns: 1fr; }
+      .pricing-always-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-always { padding: 36px 28px; }
+      .pricing-cta-left { padding: 40px 28px; }
+      .pricing-cta-right { padding: 40px 28px; }
+      .pricing-factor { padding: 28px 24px; }
     }
     @media (max-width: 500px) {
-      .pricing-tier-toggle { flex-direction: column; }
-      .pricing-tier-btn { text-align: center; }
+      .pricing-always-grid { grid-template-columns: 1fr; }
     }
-
-    /* Industry Dropdown */
-    .pricing-industry-wrap { margin-bottom: 40px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .pricing-industry-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
-    .pricing-industry-select {
-      background: var(--surface); border: 1px solid var(--border); color: var(--text);
-      font-family: var(--font-sans); font-size: 0.78rem; padding: 12px 44px 12px 18px;
-      cursor: pointer; outline: none; appearance: none; -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a96e' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 16px center; min-width: 280px; transition: border-color 0.3s;
-    }
-    .pricing-industry-select:focus { border-color: var(--gold); }
-    .pricing-industry-select option { background: #161616; color: var(--text); }
-    .pricing-industry-tag { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--black); background: var(--gold); padding: 4px 12px; font-weight: 600; }
-    .pricing-dynamic { transition: opacity 0.25s ease; }
-    .pricing-dynamic.fading { opacity: 0; }
 
   </style>
 </head>
@@ -1607,7 +1502,7 @@
     <div class="hero-bg-line2"></div>
     <p class="hero-label">Full-Stack Web Developer</p>
     <h1 class="hero-name">Olúwapámílérìn<br><em>Ayọ̀midé</em></h1>
-    <p class="hero-tagline">I build premium websites and platforms that make businesses more money — turning visitors into leads, leads into clients, and browsers into buyers. For service professionals and brands who are serious about their online presence.</p>
+    <p class="hero-tagline">I build premium websites and platforms that make businesses more money by turning visitors into leads, leads into clients, and browsers into buyers. For service professionals and brands who are serious about their online presence.</p>
     <div class="hero-cta">
       <a href="#work" class="btn-primary">View Work</a>
       <a href="#contact" class="btn-ghost">Let's Talk</a>
@@ -1648,9 +1543,9 @@
         </div>
       </div>
       <div>
-        <p class="about-body">A full-stack developer who builds complete web platforms from scratch. Every project includes a public website, a backend, an admin panel and a lead generation system. Not just a pretty front end — a complete product built to run your business.</p>
+        <p class="about-body">A full-stack developer who builds complete web platforms from scratch. Every project includes a public website, a backend, an admin panel and a lead generation system. Not just a pretty front end. A complete product built to run your business.</p>
         <p class="about-body">I understand what high-value clients expect online, what separates businesses that look established from those that do not, and how to build systems that work for you while you focus on what you do best. That understanding drives every technical decision I make.</p>
-        <p class="about-body">Whether you are a professional without a website, a brand with one that no longer reflects your work, or a business that needs a fully custom platform — I build exactly what you need, from the first line of code to the day it goes live.</p>
+        <p class="about-body">Whether you are a professional without a website, a brand with one that no longer reflects your work, or a business that needs a fully custom platform. I build exactly what you need, from the first line of code to the day it goes live.</p>
       </div>
     </div>
   </section>
@@ -1928,7 +1823,7 @@
         </div>
         <div class="service-line"></div>
         <h3 class="service-name">Progressive Web App</h3>
-        <p class="service-desc">Your platform converted into a fully installable PWA. Visitors can add it to their phone home screen like a native app — no App Store required. Faster load times, offline support and a premium feel that sets you apart from every competitor.</p>
+        <p class="service-desc">Your platform converted into a fully installable PWA. Visitors can add it to their phone home screen like a native app. No App Store required. Faster load times, offline support and a premium feel that sets you apart from every competitor.</p>
       </div>
 
       <div class="service-card">
@@ -2083,64 +1978,129 @@
     <div class="section-tag">Pricing</div>
 
     <div class="pricing-intro reveal">
-      <h2 class="pricing-intro-heading">Invest once.<br><em>Earn forever.</em></h2>
-      <p class="pricing-intro-sub">Three clear options depending on where you are and what you need. Every project starts with 50% upfront and the remaining 50% on launch. No hidden fees. No surprises. Just a platform that works as hard as you do.</p>
+      <h2 class="pricing-intro-heading">Priced around<br><em>your project.</em></h2>
+      <p class="pricing-intro-sub">Every project is different. Instead of fitting your business into a fixed tier, I build a custom proposal around exactly what you need. Nothing more, nothing less. Here's how it works.</p>
     </div>
 
-    <!-- Industry Selector -->
-    <div class="pricing-industry-wrap reveal">
-      <span class="pricing-industry-label">I work with</span>
-      <select class="pricing-industry-select" id="industrySelect" onchange="switchIndustry(this.value)">
-        <option value="realestate">Real Estate Professionals</option>
-        <option value="legal">Lawyers &amp; Finance Professionals</option>
-        <option value="health">Health, Wellness &amp; Clinics</option>
-        <option value="luxury">Luxury Lifestyle &amp; Events</option>
-        <option value="hospitality">Hospitality &amp; Restaurants</option>
-        <option value="education">Education &amp; Coaching</option>
-      </select>
-      <span class="pricing-industry-tag" id="industryTag">Real Estate</span>
+    <!-- What affects the price -->
+    <div class="pricing-factors reveal">
+
+      <div class="pricing-factor">
+        <div class="pricing-factor-number">01</div>
+        <div class="pricing-factor-title">Scope &amp; Pages</div>
+        <div class="pricing-factor-desc">A 4-page professional site costs less than a full platform with admin panel, lead capture and unlimited dynamic content. You only pay for what your business actually needs.</div>
+      </div>
+
+      <div class="pricing-factor">
+        <div class="pricing-factor-number">02</div>
+        <div class="pricing-factor-title">Features &amp; Complexity</div>
+        <div class="pricing-factor-desc">Basic enquiry forms sit at one end. Custom admin dashboards, PWA builds, newsletter systems, push notifications and database integrations sit at the other. Your quote reflects where you fall.</div>
+      </div>
+
+      <div class="pricing-factor">
+        <div class="pricing-factor-number">03</div>
+        <div class="pricing-factor-title">Ownership Model</div>
+        <div class="pricing-factor-desc">You can choose a managed setup where I handle hosting and maintenance for a monthly fee, or full ownership where I hand over the complete source code and walk away. Both are available for any project.</div>
+      </div>
+
+      <div class="pricing-factor">
+        <div class="pricing-factor-number">04</div>
+        <div class="pricing-factor-title">Timeline</div>
+        <div class="pricing-factor-desc">Standard delivery runs 3–8 weeks depending on complexity. Tighter deadlines are possible and reflected in the quote. Most clients don't need a rush, but the option is always there.</div>
+      </div>
+
+      <div class="pricing-factor">
+        <div class="pricing-factor-number">05</div>
+        <div class="pricing-factor-title">Your Industry</div>
+        <div class="pricing-factor-desc">Some industries need specialist functionality. Real estate platforms need listing management, clinics need booking flows, restaurants need seasonal content tools. Industry-specific builds are priced accordingly.</div>
+      </div>
+
+      <div class="pricing-factor">
+        <div class="pricing-factor-number">06</div>
+        <div class="pricing-factor-title">Ongoing Support</div>
+        <div class="pricing-factor-desc">Every project includes one month of post-launch support. After that, you can opt into a monthly maintenance plan or manage the site yourself. The choice is always yours.</div>
+      </div>
+
     </div>
 
-    <!-- Tier Toggle -->
-    <div class="pricing-toggle-wrap reveal">
-      <button class="pricing-toggle-btn active" onclick="switchPricingTab('starter', this)">Professional</button>
-      <button class="pricing-toggle-btn" onclick="switchPricingTab('pro', this)">Business</button>
-      <button class="pricing-toggle-btn" onclick="switchPricingTab('buyout', this)">Full Ownership</button>
-    </div>
-
-    <!-- PROFESSIONAL PANEL -->
-    <div class="pricing-panel active" id="panel-starter">
-      <div class="pricing-layout reveal">
-        <div class="pricing-features pricing-dynamic" id="features-starter">
-          <!-- Injected by JS -->
-        </div>
-        <div class="pricing-card pricing-dynamic" id="card-starter">
-          <!-- Injected by JS -->
-        </div>
+    <!-- What's always included -->
+    <div class="pricing-always reveal">
+      <div class="pricing-always-label">Every project includes</div>
+      <div class="pricing-always-grid">
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>Custom design</strong>, built around your brand with zero templates</span></div>
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>Mobile-perfect</strong> on every screen and device</span></div>
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>Full SEO setup</strong>, indexed, structured and discoverable</span></div>
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>50/50 payment split</strong>, half to start and half on launch</span></div>
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>Custom domain</strong> configured and live from day one</span></div>
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>Social sharing previews</strong> on WhatsApp, LinkedIn and more</span></div>
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>One month post-launch support</strong> included at no extra cost</span></div>
+        <div class="pricing-always-item"><div class="pricing-always-dot"></div><span><strong>No hidden fees</strong>. The quote you receive is the price you pay</span></div>
       </div>
     </div>
 
-    <!-- BUSINESS PANEL -->
-    <div class="pricing-panel" id="panel-pro">
-      <div class="pricing-layout reveal">
-        <div class="pricing-features pricing-dynamic" id="features-pro">
-          <!-- Injected by JS -->
-        </div>
-        <div class="pricing-card pricing-dynamic" id="card-pro">
-          <!-- Injected by JS -->
-        </div>
+    <!-- How it works -->
+    <div class="pricing-process reveal">
+      <div class="pricing-step">
+        <div class="pricing-step-num">Step 01</div>
+        <div class="pricing-step-title">Free Discovery Call</div>
+        <div class="pricing-step-desc">We spend 15 minutes on a call. You tell me about your business, what you need the site to do, and what success looks like. I ask questions. No commitment, no obligation.</div>
+      </div>
+      <div class="pricing-step">
+        <div class="pricing-step-num">Step 02</div>
+        <div class="pricing-step-title">Custom Proposal</div>
+        <div class="pricing-step-desc">Within 48 hours I send you a detailed proposal covering scope, features, timeline and a fixed price. No vague estimates, no surprise invoices. You know exactly what you're getting before you agree to anything.</div>
+      </div>
+      <div class="pricing-step">
+        <div class="pricing-step-num">Step 03</div>
+        <div class="pricing-step-title">Build &amp; Launch</div>
+        <div class="pricing-step-desc">Once you approve the proposal, we begin. You pay 50% upfront and the remaining 50% when your site goes live. I keep you updated throughout and you review before anything is published.</div>
       </div>
     </div>
 
-    <!-- FULL OWNERSHIP PANEL -->
-    <div class="pricing-panel" id="panel-buyout">
-      <div class="pricing-onetime-layout reveal">
-        <div class="pricing-onetime-left pricing-dynamic" id="features-buyout">
-          <!-- Injected by JS -->
+    <!-- CTA -->
+    <div class="pricing-cta-block reveal">
+      <div class="pricing-cta-left">
+        <h3 class="pricing-cta-heading">Tell me what<br>you need.<br><em>I'll tell you the cost.</em></h3>
+        <p class="pricing-cta-body">No forms to fill out, no automated responses, no waiting a week to hear back. Book a free 15-minute call and you'll have a custom proposal in your inbox within 48 hours.</p>
+        <div class="pricing-cta-terms">
+          <div class="pricing-cta-term"><div class="pricing-cta-term-dot"></div>Free 15-minute call, no commitment</div>
+          <div class="pricing-cta-term"><div class="pricing-cta-term-dot"></div>Custom proposal within 48 hours</div>
+          <div class="pricing-cta-term"><div class="pricing-cta-term-dot"></div>Fixed price, no surprises</div>
+          <div class="pricing-cta-term"><div class="pricing-cta-term-dot"></div>50% to start, 50% on launch</div>
         </div>
-        <div class="pricing-card pricing-dynamic" id="card-buyout">
-          <!-- Injected by JS -->
+        <div class="pricing-cta-buttons">
+          <a href="https://calendly.com/lerin1" target="_blank" rel="noopener" class="pricing-main-cta">Book a Free Call</a>
+          <a href="https://wa.me/2349051713217" target="_blank" rel="noopener" class="pricing-wa-btn" aria-label="Message on WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.57A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52zM12 22c-1.85 0-3.67-.5-5.25-1.43l-.38-.22-3.9.99 1.02-3.77-.25-.39A9.93 9.93 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.44-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51H7.5c-.17 0-.45.06-.69.32-.24.25-.9.88-.9 2.15s.92 2.5 1.05 2.67c.13.17 1.82 2.78 4.4 3.9.62.27 1.1.43 1.47.55.62.2 1.18.17 1.63.1.5-.07 1.53-.62 1.75-1.23.22-.6.22-1.12.15-1.23-.07-.1-.27-.17-.57-.32z" fill="currentColor"/>
+            </svg>
+          </a>
         </div>
+        <p class="pricing-cta-sub">15 minutes. No pressure. Or message me directly on WhatsApp.</p>
+      </div>
+      <div class="pricing-cta-right">
+        <div>
+          <div class="pricing-cta-right-label">Typical project ranges</div>
+        </div>
+        <div class="pricing-cta-range">
+          <strong>Professional site</strong><br>
+          4 pages · custom design · SEO · enquiry forms<br>
+          &nbsp;
+        </div>
+        <div class="pricing-cta-divider"></div>
+        <div class="pricing-cta-range">
+          <strong>Business platform</strong><br>
+          6+ pages · admin panel · lead system · analytics<br>
+          &nbsp;
+        </div>
+        <div class="pricing-cta-divider"></div>
+        <div class="pricing-cta-range">
+          <strong>Full ownership build</strong><br>
+          Complete platform · full source code handover · your accounts<br>
+          &nbsp;
+        </div>
+        <div class="pricing-cta-divider"></div>
+        <div class="pricing-cta-note">Every quote is based on your specific project. Book a call and you'll know your exact number within 48 hours.</div>
       </div>
     </div>
 
@@ -2396,395 +2356,6 @@
       });
     }, { threshold: 0.3 });
     document.querySelectorAll('.skill-card').forEach(card => ringObs.observe(card));
-
-    // ── Pricing toggles ──
-    function switchPricingTab(tab, btn) {
-      document.querySelectorAll('.pricing-panel').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.pricing-toggle-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('panel-' + tab).classList.add('active');
-      btn.classList.add('active');
-    }
-
-    // ── Industry pricing data ──
-    const industryTags = {
-      realestate: 'Real Estate',
-      legal: 'Law & Finance',
-      health: 'Health & Wellness',
-      luxury: 'Luxury & Events',
-      hospitality: 'Hospitality',
-      education: 'Education & Coaching'
-    };
-
-    const industryData = {
-
-      // ── RETAINER INDUSTRIES ──────────────────────────────────────────────
-
-      realestate: {
-        retainer: true,
-        starter: {
-          tag: 'Professional',
-          name: 'Look the Part.<br>Win the Client.',
-          desc: 'For solo realtors and agents who need a sharp, credible website that makes buyers and sellers feel confident before they even pick up the phone.',
-          forWho: ['Solo agents, independent realtors and property consultants who need a <strong>professional presence</strong> that reflects the quality of their work', 'You close deals. <strong>Your website should close the first impression.</strong>'],
-          features: [
-            { label: 'The Website', items: ['<strong>4 fully custom pages</strong> — Home, Listings, About and Contact', '<strong>Mobile-perfect</strong> on every screen and device', '<strong>Built around your brand</strong> — zero templates, zero compromise', '<strong>Enquiry forms and WhatsApp button</strong> so leads reach you instantly'] },
-            { label: 'Your Listings', items: ['<strong>Up to 20 property listings</strong> with photos and full details', '<strong>Individual listing pages</strong> with enquiry form on each', '<strong>Open Graph previews</strong> so listings look stunning on WhatsApp'] },
-            { label: 'Visibility', items: ['<strong>Full SEO setup</strong> so you show up when buyers search locally', '<strong>Google-indexed listing pages</strong> for maximum reach'] },
-            { label: 'Managed for You', items: ['<strong>Hosted and maintained by me</strong> under your custom domain', '<strong>Listing updates done without you lifting a finger</strong>', 'Want full independence? <strong>Upgrade to Full Ownership anytime.</strong>'] }
-          ],
-          setup: '$497', monthly: '$149', time: 'Live in 3–5 weeks.'
-        },
-        pro: {
-          tag: 'Business',
-          name: 'A Platform,<br>Not Just a Website.',
-          desc: 'For established agents, teams and property brands who need a full platform — admin panel, lead system, analytics — running while they sleep.',
-          forWho: ['Real estate teams, brokers and growing agents who need more than a website — they need a <strong>system that captures and manages leads automatically</strong>', 'You are beyond the basics. <strong>You need a platform that closes deals on your behalf.</strong>'],
-          features: [
-            { label: 'The Platform', items: ['<strong>6 fully custom pages</strong> built around your specific business flow', '<strong>Admin panel</strong> — add, edit and manage all listings without touching code', '<strong>Unlimited property listings</strong> with photo and video uploads via Cloudinary', '<strong>NEW badge</strong> auto-appears on fresh listings and fades after 24 hours', '<strong>Sold and Rented badges</strong> — showcase your track record in one click'] },
-            { label: 'Lead Generation', items: ['<strong>Smart lead capture popup</strong> — timed, dismissible, non-intrusive', '<strong>Enquiry form and Schedule Tour tab</strong> on every listing page', '<strong>Push notifications</strong> the moment a new lead comes in', '<strong>Every lead saved</strong> in your admin panel with CSV export', '<strong>Newsletter system</strong> — own your audience, not just your follower count'] },
-            { label: 'Visibility & SEO', items: ['<strong>Full SEO on every page</strong> plus dynamic SEO per listing', '<strong>Google indexes every property individually</strong> — maximum search coverage', '<strong>Perfect social previews</strong> on WhatsApp, Instagram and LinkedIn', '<strong>Sitemap and robots.txt</strong> included'] },
-            { label: 'Analytics & Extras', items: ['<strong>View counts and enquiry tracking per listing</strong> — know what is hot', '<strong>Mortgage calculator</strong> for buyers on every listing page', '<strong>Similar properties</strong> shown at the bottom of every listing', '<strong>Progressive Web App</strong> — clients can install your site on their phone <span class="pricing-badge">PWA</span>'] }
-          ],
-          setup: '$997', monthly: '$249', time: 'Most popular. Built for agents done playing small.'
-        },
-        buyout: {
-          tag: 'Full Ownership',
-          name: 'Your Platform.<br>Your Rules.',
-          desc: 'Every feature from Business, delivered as yours — fully built, fully configured, set up under your own accounts. No monthly fees, no middleman, ever.',
-          body: ['The complete real estate platform handed over entirely. Your code, your infrastructure, your future. Take it anywhere, update it anytime, hand it to anyone.', 'For real estate businesses that want complete independence and full control from day one.'],
-          items: ['<strong>Every feature in the Business plan</strong> — nothing removed, nothing held back', '<strong>Unlimited listings with full admin panel</strong> — manage everything without touching code', '<strong>Full source code delivered</strong> — clean, documented and yours forever', '<strong>Set up under your own accounts</strong> — GitHub, Supabase, Vercel and Cloudinary', '<strong>Custom domain configured</strong> and live from day one', '<strong>Complete handover documentation</strong> so anyone can manage it after me', '<strong>No monthly fees — ever.</strong> Total independence from day one'],
-          price: '$3,500', time: 'Typical delivery: 6–10 weeks.'
-        }
-      },
-
-      hospitality: {
-        retainer: true,
-        starter: {
-          tag: 'Professional',
-          name: 'Make Them Book<br>Before They Arrive.',
-          desc: 'For boutique hotels, restaurants and independent hospitality operators who need a beautiful, bookable website that does the selling for them.',
-          forWho: ['Boutique hotels, independent restaurants, catering businesses and Airbnb operators who need a website that <strong>makes people want to show up</strong>', 'In hospitality, presentation is everything. <strong>Your website is the first experience you offer — make it count.</strong>'],
-          features: [
-            { label: 'The Website', items: ['<strong>4 fully custom pages</strong> — Home, Experience, About and Contact', '<strong>Mobile-perfect</strong> — guests are always browsing on their phones', '<strong>Rich, immersive design</strong> built around your atmosphere and brand', '<strong>Reservation and enquiry forms</strong> on every relevant page'] },
-            { label: 'Your Offering', items: ['<strong>Up to 20 menu items, room types or experience listings</strong>', '<strong>Individual pages per offering</strong> with full photo galleries', '<strong>Open Graph previews</strong> so your pages look stunning when shared'] },
-            { label: 'Visibility', items: ['<strong>Full local SEO setup</strong> so guests find you when searching nearby', '<strong>Google-indexed pages</strong> for every key experience you offer'] },
-            { label: 'Managed for You', items: ['<strong>Hosted and maintained by me</strong> under your custom domain', '<strong>Seasonal menu and offering updates</strong> handled without you lifting a finger', 'Want full independence? <strong>Upgrade to Full Ownership anytime.</strong>'] }
-          ],
-          setup: '$497', monthly: '$149', time: 'Live in 3–5 weeks.'
-        },
-        pro: {
-          tag: 'Business',
-          name: 'A Venue That<br>Sells Itself.',
-          desc: 'For hotels, restaurant groups and hospitality brands that need a full platform — reservations, lead capture, guest management — running around the clock.',
-          forWho: ['Boutique hotels, restaurant groups, event venues and hospitality brands that need a platform to <strong>capture bookings and build a returning guest base automatically</strong>', 'The best hospitality experiences fill up fast. <strong>Make sure your platform captures every interested guest before they book elsewhere.</strong>'],
-          features: [
-            { label: 'The Platform', items: ['<strong>6 fully custom pages</strong> — crafted to immerse and convert', '<strong>Admin panel</strong> — update menus, rooms, events and offers without code', '<strong>Unlimited experience and offering entries</strong> with photo and video', '<strong>Seasonal and availability badges</strong> — update your status in one click', '<strong>Events and special offers section</strong> managed entirely from your admin'] },
-            { label: 'Guest Acquisition', items: ['<strong>Smart reservation popup</strong> — timed, elegant, non-intrusive', '<strong>Booking and enquiry tab</strong> on every relevant page', '<strong>Push notifications</strong> the moment a new reservation request comes in', '<strong>Every enquiry saved</strong> in your admin with guest details', '<strong>Newsletter system</strong> — build a loyal guest list you own forever'] },
-            { label: 'Visibility & SEO', items: ['<strong>Full local and national SEO</strong> on every page', '<strong>Dynamic SEO per experience or menu item</strong> — Google indexes everything', '<strong>Perfect social previews</strong> when guests share your pages', '<strong>Sitemap and robots.txt</strong> — maximum search engine visibility'] },
-            { label: 'Analytics & Extras', items: ['<strong>View and enquiry tracking per offering</strong> — know your best sellers', '<strong>Google Maps embed</strong> on every location-relevant page', '<strong>Review and testimonial section</strong> to convert hesitant visitors', '<strong>Progressive Web App</strong> — guests install your venue on their phone <span class="pricing-badge">PWA</span>'] }
-          ],
-          setup: '$997', monthly: '$249', time: 'Built for hospitality businesses that are serious about occupancy.'
-        },
-        buyout: {
-          tag: 'Full Ownership',
-          name: 'Your Venue Platform.<br>Fully Yours.',
-          desc: 'The complete hospitality platform built from scratch and handed over entirely. Your code, your infrastructure, your guest data — forever.',
-          body: ['Everything in the Business plan delivered as your property. Full source code, complete handover, configured under your own accounts.', 'For hotels, restaurant groups and event venues that want total ownership and the ability to scale on their own terms.'],
-          items: ['<strong>Every feature in the Business plan</strong> — nothing removed', '<strong>Full source code delivered</strong> — documented and yours to keep', '<strong>Set up under your own accounts</strong> — GitHub, Supabase, Vercel', '<strong>Custom domain configured</strong> from day one', '<strong>Complete handover documentation</strong>', '<strong>No monthly fees — ever</strong>'],
-          price: '$3,500', time: 'Typical delivery: 6–10 weeks.'
-        }
-      },
-
-      education: {
-        retainer: true,
-        starter: {
-          tag: 'Professional',
-          name: 'Turn Knowledge<br>Into Enrolments.',
-          desc: 'For tutors, coaches and independent educators who need a professional website that communicates expertise and converts visitors into students.',
-          forWho: ['Solo tutors, online coaches, consultants and independent educators who need a website that <strong>positions them as the obvious choice</strong> in their subject', 'People invest in educators they believe in. <strong>Your website needs to make believers out of browsers.</strong>'],
-          features: [
-            { label: 'The Website', items: ['<strong>4 fully custom pages</strong> — Home, Courses or Services, About and Contact', '<strong>Mobile-perfect</strong> on every screen and device', '<strong>Clean, authoritative design</strong> built around your expertise', '<strong>Enrolment and enquiry forms</strong> so prospective students can reach you easily'] },
-            { label: 'Your Offering', items: ['<strong>Up to 6 course or programme pages</strong> with full details and outcomes', '<strong>Educator bio and credentials</strong> to establish authority', '<strong>Student testimonials section</strong> to build confidence in new enrolees'] },
-            { label: 'Visibility', items: ['<strong>Full SEO setup</strong> so students find you when searching your subject', '<strong>Google-indexed course pages</strong> for each programme'] },
-            { label: 'Managed for You', items: ['<strong>Hosted and maintained by me</strong> under your custom domain', '<strong>Course and content updates</strong> handled without you lifting a finger', 'Want full independence? <strong>Upgrade to Full Ownership anytime.</strong>'] }
-          ],
-          setup: '$497', monthly: '$149', time: 'Live in 3–5 weeks.'
-        },
-        pro: {
-          tag: 'Business',
-          name: 'A Platform That<br>Enrols While You Teach.',
-          desc: 'For academies, coaching businesses and education brands that need a full platform — course management, lead capture, newsletter — running 24/7.',
-          forWho: ['Training institutes, coaching businesses, academies and education brands that need a platform to <strong>automate enrolments, manage content and build a student community</strong>', 'The best educators fill their programmes without chasing leads. <strong>Your platform should do that work for you.</strong>'],
-          features: [
-            { label: 'The Platform', items: ['<strong>6 fully custom pages</strong> — built around your curriculum and brand', '<strong>Admin panel</strong> — manage courses, instructors, schedules and content without code', '<strong>Unlimited course and programme entries</strong> with full details and media', '<strong>NEW badge</strong> auto-highlights fresh programmes and intake announcements', '<strong>Cohort status badges</strong> — mark open, full or upcoming at a click'] },
-            { label: 'Student Acquisition', items: ['<strong>Smart enrolment popup</strong> — timed, relevant and non-intrusive', '<strong>Apply Now and Book a Call tab</strong> on every course page', '<strong>Push notifications</strong> the moment a new enrolment request arrives', '<strong>Every lead saved</strong> in your admin panel with full applicant details', '<strong>Newsletter system</strong> — build and own a student community that never disappears'] },
-            { label: 'Visibility & SEO', items: ['<strong>Full SEO on every page</strong> plus dynamic SEO per course', '<strong>Google indexes every programme individually</strong> — maximum search presence', '<strong>Perfect LinkedIn and WhatsApp previews</strong> when sharing course links', '<strong>Sitemap and robots.txt</strong> — nothing hidden from search engines'] },
-            { label: 'Analytics & Extras', items: ['<strong>Enrolment and view tracking per course</strong> — know your top performers', '<strong>ROI or earnings calculator</strong> to show prospective students the value', '<strong>Instructor profiles</strong> with individual credentials and courses', '<strong>Progressive Web App</strong> — students can install your academy on their phone <span class="pricing-badge">PWA</span>'] }
-          ],
-          setup: '$997', monthly: '$249', time: 'Built for educators who are ready to scale beyond referrals.'
-        },
-        buyout: {
-          tag: 'Full Ownership',
-          name: 'Your Academy Platform.<br>Fully Yours.',
-          desc: 'The complete education platform built from scratch and handed over entirely. Your code, your student data, your total independence.',
-          body: ['Everything in the Business plan delivered as your property. Full source code, complete handover, configured under your own accounts.', 'For academies and coaching businesses that want complete ownership and freedom to grow without any ongoing dependency.'],
-          items: ['<strong>Every feature in the Business plan</strong> — nothing removed', '<strong>Full source code delivered</strong> — documented, clean and yours', '<strong>Set up under your own accounts</strong> — GitHub, Supabase, Vercel', '<strong>Custom domain configured</strong> from day one', '<strong>Complete handover documentation</strong>', '<strong>No monthly fees — ever</strong>'],
-          price: '$3,500', time: 'Typical delivery: 6–10 weeks.'
-        }
-      },
-
-      // ── ONE-TIME INDUSTRIES ──────────────────────────────────────────────
-
-      legal: {
-        retainer: false,
-        starter: {
-          tag: 'Professional',
-          name: 'Command Trust.<br>Before They Call.',
-          desc: 'For solo lawyers, advisors and financial consultants who need a website that signals authority and expertise the moment someone lands on it.',
-          forWho: ['Solo practitioners, independent lawyers and financial advisors who need a <strong>website that commands instant credibility</strong>', 'Clients choose professionals they trust. <strong>Your website needs to earn that trust before the first consultation.</strong>'],
-          features: [
-            { label: 'The Website', items: ['<strong>4 fully custom pages</strong> — Home, Practice Areas, About and Contact', '<strong>Mobile-perfect</strong> on every screen and device', '<strong>Premium, authoritative design</strong> built around your practice', '<strong>Consultation request forms</strong> so prospects can reach you formally'] },
-            { label: 'Your Practice', items: ['<strong>Up to 6 practice area pages</strong> with detailed descriptions', '<strong>Professional bio and credentials page</strong> that builds immediate trust', '<strong>Client testimonials section</strong> to reinforce your track record'] },
-            { label: 'Visibility', items: ['<strong>Full SEO setup</strong> so you appear when people search your specialisation locally', '<strong>Google-indexed practice area pages</strong> for targeted reach'] },
-            { label: 'Delivered to You', items: ['<strong>Hosted and live under your custom domain</strong> from day one', '<strong>Full source code handed over</strong> — update it yourself or through anyone you choose', '<strong>One month of post-launch support</strong> included'] }
-          ],
-          price: '$597', time: 'Live in 3–5 weeks. Yours to keep forever.'
-        },
-        pro: {
-          tag: 'Business',
-          name: 'A Firm That<br>Works Around the Clock.',
-          desc: 'For law firms and financial advisory practices that need a full platform — case intake, client management, lead capture — operating 24/7.',
-          forWho: ['Law firms, multi-partner practices and established advisory businesses that need a platform to <strong>automate intake, capture leads and build authority at scale</strong>', 'Your expertise is undeniable. <strong>Now your digital presence needs to match it.</strong>'],
-          features: [
-            { label: 'The Platform', items: ['<strong>6 fully custom pages</strong> tailored to your firm\'s structure and services', '<strong>Admin panel</strong> — manage all content, cases and leads without touching code', '<strong>Unlimited practice area and team pages</strong>', '<strong>Case study and results showcase</strong> to demonstrate your track record'] },
-            { label: 'Client Acquisition', items: ['<strong>Smart lead capture popup</strong> — professional, non-intrusive, effective', '<strong>Consultation booking form</strong> on every relevant page', '<strong>Push notifications</strong> the moment a new enquiry comes in', '<strong>Every enquiry saved</strong> in your admin panel with full history', '<strong>Newsletter system</strong> for legal insights and audience retention'] },
-            { label: 'Authority & SEO', items: ['<strong>Full SEO on every page</strong> plus dynamic SEO per practice area', '<strong>Google indexes every service page individually</strong>', '<strong>Structured data markup</strong> for professional credibility in search results', '<strong>Perfect LinkedIn and social previews</strong> on every share'] },
-            { label: 'Analytics & Extras', items: ['<strong>Enquiry tracking per practice area</strong> — know where clients come from', '<strong>Fee calculator or legal cost estimator</strong> to qualify prospects automatically', '<strong>Team profiles with individual contact options</strong>', '<strong>Progressive Web App</strong> — accessible on any device <span class="pricing-badge">PWA</span>'] }
-          ],
-          price: '$1,297', time: 'Live in 4–8 weeks. Full ownership from day one.'
-        },
-        buyout: {
-          tag: 'Full Ownership',
-          name: 'Your Firm\'s Platform.<br>Fully Yours.',
-          desc: 'Everything in Business, delivered as your property. Full source code, complete handover, set up under your accounts. No ongoing fees of any kind.',
-          body: ['The complete legal platform handed over entirely with full documentation. Your code, your infrastructure, your complete independence.', 'Built for firms that want full control — update it yourself, hand it to your IT team, or scale it however your practice demands.'],
-          items: ['<strong>Every feature in the Business plan</strong> — nothing removed', '<strong>Full source code delivered</strong> — documented and yours to keep', '<strong>Set up under your own accounts</strong> — GitHub, Supabase, Vercel', '<strong>Custom domain configured</strong> from day one', '<strong>Complete handover documentation</strong>', '<strong>No fees of any kind after delivery</strong>'],
-          price: '$3,500', time: 'Typical delivery: 6–10 weeks.'
-        }
-      },
-
-      health: {
-        retainer: false,
-        starter: {
-          tag: 'Professional',
-          name: 'Build Trust.<br>Fill Your Books.',
-          desc: 'For solo practitioners, therapists and wellness professionals who need a warm, credible website that turns visitors into booked appointments.',
-          forWho: ['Solo practitioners, therapists, nutritionists and wellness coaches who need a website that feels as <strong>safe and trustworthy as their practice</strong>', 'People choose their health professionals carefully. <strong>Your website needs to make that choice easy.</strong>'],
-          features: [
-            { label: 'The Website', items: ['<strong>4 fully custom pages</strong> — Home, Services, About and Contact', '<strong>Mobile-perfect</strong> on every screen and device', '<strong>Warm, professional design</strong> that builds confidence and trust immediately', '<strong>Appointment request forms</strong> so clients can book without calling'] },
-            { label: 'Your Services', items: ['<strong>Up to 6 service pages</strong> with full descriptions and pricing', '<strong>Practitioner bio and credentials</strong> to establish expertise', '<strong>Client testimonials section</strong> that reassures new clients'] },
-            { label: 'Visibility', items: ['<strong>Full local SEO setup</strong> so you appear when people search your specialisation nearby', '<strong>Google-indexed service pages</strong> for each offering'] },
-            { label: 'Delivered to You', items: ['<strong>Hosted and live under your custom domain</strong> from day one', '<strong>Full source code handed over</strong> — yours to keep and manage', '<strong>One month of post-launch support</strong> included'] }
-          ],
-          price: '$597', time: 'Live in 3–5 weeks. Yours to keep forever.'
-        },
-        pro: {
-          tag: 'Business',
-          name: 'A Practice That<br>Never Closes.',
-          desc: 'For clinics, studios and health businesses that need a full platform — online booking, lead capture, newsletter — working even when you\'re with a patient.',
-          forWho: ['Clinics, multi-practitioner studios, gyms and growing wellness brands that need a platform to <strong>automate bookings and build a loyal client base</strong>', 'Your clients trust you with their health. <strong>Your platform should reflect that level of care.</strong>'],
-          features: [
-            { label: 'The Platform', items: ['<strong>6 fully custom pages</strong> built around your clinic or studio flow', '<strong>Admin panel</strong> — manage services, staff, availability and content without code', '<strong>Unlimited service and treatment pages</strong> with photos and descriptions', '<strong>Staff profiles page</strong> with individual specialisations and credentials'] },
-            { label: 'Client Acquisition', items: ['<strong>Smart booking and enquiry popup</strong> — timed, non-intrusive, effective', '<strong>Book an Appointment tab</strong> on every relevant page', '<strong>Push notifications</strong> the moment a new booking comes in', '<strong>Every enquiry saved</strong> in your admin panel with full history', '<strong>Newsletter system</strong> for health tips, offers and client retention'] },
-            { label: 'Visibility & SEO', items: ['<strong>Full SEO on every page</strong> plus dynamic SEO per service', '<strong>Google indexes every treatment or service individually</strong>', '<strong>Local SEO optimisation</strong> — appear in map results and nearby searches', '<strong>Perfect social previews</strong> when sharing on WhatsApp or Instagram'] },
-            { label: 'Analytics & Extras', items: ['<strong>Enquiry tracking per service</strong> — know your highest-converting treatments', '<strong>BMI, calorie or health calculator</strong> to engage and qualify visitors', '<strong>Before and after gallery</strong> to showcase real results', '<strong>Progressive Web App</strong> — clients install your practice on their phone <span class="pricing-badge">PWA</span>'] }
-          ],
-          price: '$1,297', time: 'Live in 4–8 weeks. Full ownership from day one.'
-        },
-        buyout: {
-          tag: 'Full Ownership',
-          name: 'Your Practice Platform.<br>Fully Yours.',
-          desc: 'Everything in Business, delivered as your property. Full source code, complete handover, configured under your own accounts. No fees after delivery.',
-          body: ['The complete health and wellness platform handed over entirely. Your code, your infrastructure, your patient data.', 'Built for clinics and wellness businesses that want complete ownership and the freedom to scale entirely on their own terms.'],
-          items: ['<strong>Every feature in the Business plan</strong> — nothing removed', '<strong>Full source code delivered</strong> — documented, clean and yours', '<strong>Set up under your own accounts</strong> — GitHub, Supabase, Vercel', '<strong>Custom domain configured</strong> from day one', '<strong>Complete handover documentation</strong>', '<strong>No fees of any kind after delivery</strong>'],
-          price: '$3,500', time: 'Typical delivery: 6–10 weeks.'
-        }
-      },
-
-      luxury: {
-        retainer: false,
-        starter: {
-          tag: 'Professional',
-          name: 'As Premium as<br>What You Create.',
-          desc: 'For photographers, designers, event planners and luxury creatives who need a portfolio site as beautiful and intentional as their work.',
-          forWho: ['Photographers, interior designers, wedding planners, stylists and luxury creatives who need a <strong>portfolio that does justice to their craft</strong>', 'Your work is premium. <strong>Your website should be the first proof of that.</strong>'],
-          features: [
-            { label: 'The Website', items: ['<strong>4 fully custom pages</strong> — Home, Portfolio, About and Contact', '<strong>Mobile-perfect</strong> — your work looks stunning on every screen', '<strong>Luxury-first design</strong> — refined, editorial and entirely yours', '<strong>Enquiry forms</strong> so prospective clients can reach you elegantly'] },
-            { label: 'Your Work', items: ['<strong>Up to 20 portfolio pieces or project entries</strong> with full galleries', '<strong>Individual project pages</strong> with detailed descriptions', '<strong>Stunning social sharing previews</strong> every time you share a link'] },
-            { label: 'Visibility', items: ['<strong>Full SEO setup</strong> so the right clients find you', '<strong>Google-indexed portfolio pages</strong> to maximise reach'] },
-            { label: 'Delivered to You', items: ['<strong>Hosted and live under your custom domain</strong> from day one', '<strong>Full source code handed over</strong> — yours to keep and manage', '<strong>One month of post-launch support</strong> included'] }
-          ],
-          price: '$597', time: 'Live in 3–5 weeks. Yours to keep forever.'
-        },
-        pro: {
-          tag: 'Business',
-          name: 'A Brand That<br>Speaks Before You Do.',
-          desc: 'For luxury brands, agencies and event businesses that need a full platform to showcase their work, capture high-value leads and build an exclusive audience.',
-          forWho: ['Luxury event agencies, design studios, high-end photographers and lifestyle brands that need a platform as <strong>refined and functional as the experiences they create</strong>', 'High-value clients make decisions fast. <strong>Your platform needs to capture them before they scroll past.</strong>'],
-          features: [
-            { label: 'The Platform', items: ['<strong>6 fully custom pages</strong> — each one a statement of your aesthetic', '<strong>Admin panel</strong> — curate and manage your portfolio without touching code', '<strong>Unlimited project and portfolio entries</strong> with photo and video', '<strong>NEW badge</strong> to spotlight your latest work automatically', '<strong>Availability status</strong> — let clients know when you are taking bookings'] },
-            { label: 'Lead Generation', items: ['<strong>Smart enquiry popup</strong> — elegant, timed and non-intrusive', '<strong>Enquiry form and booking tab</strong> on every page', '<strong>Push notifications</strong> the moment a high-value enquiry lands', '<strong>Every lead saved</strong> in your admin with full details', '<strong>Newsletter system</strong> — build and own an exclusive audience'] },
-            { label: 'Visibility & Presence', items: ['<strong>Full SEO on every page</strong> plus dynamic SEO per project', '<strong>Google indexes every portfolio piece</strong> individually', '<strong>Perfect previews</strong> on Instagram, Pinterest, LinkedIn and WhatsApp', '<strong>Sitemap and robots.txt</strong> — nothing is invisible to search'] },
-            { label: 'Analytics & Extras', items: ['<strong>View and enquiry tracking per project</strong> — know what resonates', '<strong>Investment calculator or quote estimator</strong> to pre-qualify leads', '<strong>Press and featured-in section</strong> to reinforce prestige', '<strong>Progressive Web App</strong> — your brand is installable on any device <span class="pricing-badge">PWA</span>'] }
-          ],
-          price: '$1,297', time: 'Live in 4–8 weeks. Full ownership from day one.'
-        },
-        buyout: {
-          tag: 'Full Ownership',
-          name: 'Your Brand Platform.<br>Fully Yours.',
-          desc: 'Everything in Business, delivered as your property. Full source code, complete handover, configured under your own accounts. No fees after delivery.',
-          body: ['The complete luxury platform handed over entirely. Your code, your infrastructure, your creative independence.', 'For luxury brands and creative agencies that want total ownership and the freedom to evolve their platform on their own terms.'],
-          items: ['<strong>Every feature in the Business plan</strong> — nothing removed', '<strong>Full source code delivered</strong> — documented, clean and yours', '<strong>Set up under your own accounts</strong> — GitHub, Supabase, Vercel, Cloudinary', '<strong>Custom domain configured</strong> from day one', '<strong>Complete handover documentation</strong>', '<strong>No fees of any kind after delivery</strong>'],
-          price: '$3,500', time: 'Typical delivery: 6–10 weeks.'
-        }
-      }
-
-    };
-
-    let currentIndustry = 'realestate';
-
-    function dot() { return '<div class="pricing-item-dot"></div>'; }
-
-    function renderFeatures(groups) {
-      return groups.map(g => `
-        <div class="pricing-group">
-          <div class="pricing-group-label">${g.label}</div>
-          <div class="pricing-items">
-            ${g.items.map(i => `<div class="pricing-item">${dot()}<span>${i}</span></div>`).join('')}
-          </div>
-        </div>`).join('');
-    }
-
-    function renderForWho(lines) {
-      return `<div class="pricing-group">
-        <div class="pricing-group-label">Who this is for</div>
-        <div class="pricing-items">
-          ${lines.map(l => `<div class="pricing-item">${dot()}<span>${l}</span></div>`).join('')}
-        </div>
-      </div>`;
-    }
-
-    // Retainer card (setup + monthly)
-    function renderRetainerCard(d, label) {
-      return `
-        <div class="pricing-card-tag">${d.tag}</div>
-        <div class="pricing-card-name">${d.name}</div>
-        <div class="pricing-card-desc">${d.desc}</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-monthly-label">One-time setup</div>
-        <div class="pricing-price-row"><div class="pricing-price-main">${d.setup}</div></div>
-        <div class="pricing-price-note">50% to begin. 50% on launch day.</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-monthly-label">Then monthly</div>
-        <div class="pricing-price-row"><div class="pricing-price-main">${d.monthly}</div><div class="pricing-price-sub">/ mo</div></div>
-        <div class="pricing-price-note">${label === 'pro' ? 'Fully managed — hosting, updates, maintenance.' : 'Hosting, maintenance and updates.'} Cancel anytime.</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-guarantees">
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No long-term commitment</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Starts with a free 15-min call</div>
-        </div>
-        <a href="#contact" class="pricing-cta">Start the Conversation</a>
-        <p class="pricing-cta-sub">${d.time}</p>`;
-    }
-
-    // One-time card (flat price, no monthly)
-    function renderOnetimeCard(d) {
-      return `
-        <div class="pricing-card-tag">${d.tag}</div>
-        <div class="pricing-card-name">${d.name}</div>
-        <div class="pricing-card-desc">${d.desc}</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-monthly-label">One-time project fee</div>
-        <div class="pricing-price-row"><div class="pricing-price-main">${d.price}</div></div>
-        <div class="pricing-price-note">50% to begin. 50% on launch day. No monthly fees.</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-guarantees">
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Pay once, own it forever</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No hidden fees</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>One month post-launch support included</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Starts with a free 15-min call</div>
-        </div>
-        <a href="#contact" class="pricing-cta">Start the Conversation</a>
-        <p class="pricing-cta-sub">${d.time}</p>`;
-    }
-
-    function renderBuyoutLeft(d) {
-      return `
-        <h3 class="pricing-onetime-heading">Pay once.<br>Own it <em>forever.</em></h3>
-        ${d.body.map(b => `<p class="pricing-onetime-body">${b}</p>`).join('')}
-        <div class="pricing-onetime-includes">
-          ${d.items.map(i => `<div class="pricing-onetime-item">${dot()}<span>${i}</span></div>`).join('')}
-        </div>`;
-    }
-
-    function renderBuyoutCard(d) {
-      return `
-        <div class="pricing-card-tag">${d.tag}</div>
-        <div class="pricing-card-name">${d.name}</div>
-        <div class="pricing-card-desc">${d.desc}</div>
-        <div class="pricing-price-row"><div class="pricing-price-main">${d.price}</div></div>
-        <div class="pricing-price-note">50% to begin. 50% on delivery of the final product.</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-guarantees">
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Everything in Business, included</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>No monthly fees — ever</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Full source code, yours to keep</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Set up under your own accounts</div>
-          <div class="pricing-guarantee"><div class="pricing-guarantee-dot"></div>Complete handover and documentation</div>
-        </div>
-        <a href="#contact" class="pricing-cta">Start the Conversation</a>
-        <p class="pricing-cta-sub">${d.time}</p>`;
-    }
-
-    function updatePricing(industry, animate) {
-      const data = industryData[industry];
-      const isRetainer = data.retainer;
-      const panels = ['features-starter', 'card-starter', 'features-pro', 'card-pro', 'features-buyout', 'card-buyout'];
-
-      function inject() {
-        document.getElementById('features-starter').innerHTML = renderForWho(data.starter.forWho) + renderFeatures(data.starter.features);
-        document.getElementById('card-starter').innerHTML = isRetainer
-          ? renderRetainerCard(data.starter, 'starter')
-          : renderOnetimeCard(data.starter);
-
-        document.getElementById('features-pro').innerHTML = renderForWho(data.pro.forWho) + renderFeatures(data.pro.features);
-        document.getElementById('card-pro').innerHTML = isRetainer
-          ? renderRetainerCard(data.pro, 'pro')
-          : renderOnetimeCard(data.pro);
-
-        document.getElementById('features-buyout').innerHTML = renderBuyoutLeft(data.buyout);
-        document.getElementById('card-buyout').innerHTML = renderBuyoutCard(data.buyout);
-
-        document.getElementById('industryTag').textContent = industryTags[industry];
-        panels.forEach(id => document.getElementById(id).classList.remove('fading'));
-      }
-
-      if (animate) {
-        panels.forEach(id => document.getElementById(id).classList.add('fading'));
-        setTimeout(inject, 250);
-      } else {
-        inject();
-      }
-    }
-
-    function switchIndustry(value) {
-      currentIndustry = value;
-      updatePricing(value, true);
-    }
-
-    // Initialise on load
-    updatePricing('realestate', false);
 
     // ── Project screenshot load states ──
     document.querySelectorAll('.project-screenshot').forEach(img => {
