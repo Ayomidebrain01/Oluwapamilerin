@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://ayomidebrain01.github.io/Oluwapamilerin/sitemap.xml
+Sitemap: https://www.lerin.dev/sitemap.xml
