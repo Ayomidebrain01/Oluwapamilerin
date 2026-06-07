@@ -302,66 +302,89 @@
     .work-intro { max-width:640px; margin-bottom:64px; }
     .work-intro p { font-size:0.9rem; color:var(--text-dim); line-height:2; }
 
-    /* Case Study Cards */
-    .case-studies { display:flex; flex-direction:column; gap:3px; }
-    .case-card {
+    /* ── SELECTED WORK GRID ── */
+    .work-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:3px;
+    }
+    .work-card {
       background:var(--surface-light);
       border-top:1px solid var(--border);
+      display:flex;
+      flex-direction:column;
       overflow:hidden;
-      transition:border-color 0.4s ease;
       position:relative;
+      transition:border-color 0.4s ease, transform 0.4s ease;
     }
-    .case-card:hover { border-color:rgba(201,169,110,0.3); }
-    .case-card::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.5s ease; }
-    .case-card:hover::after { width:100%; }
-
-    .case-card-inner { display:grid; grid-template-columns:1fr 1fr; min-height:380px; }
-
-    .case-info { padding:clamp(28px,4vw,48px); display:flex; flex-direction:column; justify-content:space-between; border-right:1px solid var(--border); }
-    .case-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
-    .case-num { font-family:var(--font-mono); font-size:0.65rem; letter-spacing:0.2em; color:rgba(255,255,255,0.2); }
-
-    .status-badge {
-      display:inline-flex; align-items:center; gap:6px;
-      font-family:var(--font-mono); font-size:0.58rem; font-weight:700;
-      letter-spacing:0.15em; text-transform:uppercase;
-      padding:4px 10px; border-radius:2px;
+    .work-card::after {
+      content:'';
+      position:absolute; bottom:0; left:0;
+      width:0; height:1px; background:var(--gold);
+      transition:width 0.5s ease;
     }
-    .status-badge.in-progress { background:rgba(201,169,110,0.08); color:var(--gold); border:1px solid rgba(201,169,110,0.25); }
-    .status-badge.in-progress::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--gold); animation:pulseDot 1.5s ease infinite; }
-    .status-badge.live { background:rgba(255,255,255,0.04); color:var(--text-dim); border:1px solid var(--border); }
-    @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
+    .work-card:hover { border-color:rgba(201,169,110,0.3); transform:translateY(-4px); }
+    .work-card:hover::after { width:100%; }
 
-    .case-client { font-family:var(--font-serif); font-size:clamp(1.3rem,2.5vw,1.9rem); font-weight:400; color:var(--text); margin-bottom:4px; line-height:1.15; }
-    .case-location { font-size:0.78rem; color:var(--text-dim); font-weight:300; margin-bottom:16px; }
-    .case-category {
-      display:inline-block; font-size:0.62rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase;
-      color:var(--gold); border:1px solid rgba(201,169,110,0.2); padding:3px 8px; margin-bottom:20px;
+    .work-card-image {
+      width:100%;
+      aspect-ratio:16/10;
+      object-fit:cover;
+      object-position:center top;
+      display:block;
+      filter:grayscale(30%) contrast(1.05);
+      transition:filter 0.5s ease, transform 0.6s ease;
+      background:var(--black);
     }
-    .case-brief { font-size:0.83rem; color:var(--text-dim); line-height:1.85; font-weight:300; flex:1; }
-    .case-bottom { margin-top:28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
-    .case-stack { display:flex; gap:6px; flex-wrap:wrap; }
-    .stack-tag { font-size:0.6rem; font-weight:500; color:rgba(255,255,255,0.3); border:1px solid var(--border); padding:2px 6px; letter-spacing:0.05em; }
-    .case-link {
-      display:inline-flex; align-items:center; gap:6px;
-      font-family:var(--font-mono); font-size:0.62rem; font-weight:700;
-      letter-spacing:0.15em; text-transform:uppercase;
-      color:var(--gold); text-decoration:none; transition:gap 0.3s;
-    }
-    .case-link:hover { gap:10px; }
-    .case-link-muted {
-      display:inline-flex; align-items:center; gap:6px;
-      font-family:var(--font-mono); font-size:0.62rem; font-weight:700;
-      letter-spacing:0.15em; text-transform:uppercase;
-      color:var(--text-dim); opacity:0.4; cursor:not-allowed;
-    }
+    .work-card:hover .work-card-image { filter:grayscale(0%) contrast(1.05); transform:scale(1.03); }
 
-    .case-details { padding:clamp(28px,4vw,48px); display:flex; flex-direction:column; gap:28px; }
-    .detail-block h4 { font-family:var(--font-mono); font-size:0.58rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; opacity:0.7; }
-    .detail-block p { font-size:0.82rem; color:var(--text-dim); line-height:1.9; font-weight:300; }
-    .deliverables { list-style:none; display:flex; flex-direction:column; gap:6px; }
-    .deliverables li { font-size:0.8rem; color:var(--text-dim); font-weight:300; display:flex; align-items:flex-start; gap:8px; line-height:1.6; }
-    .deliverables li::before { content:'—'; color:var(--gold); font-size:0.7rem; flex-shrink:0; margin-top:2px; opacity:0.6; }
+    .work-card-body {
+      padding:clamp(24px,2.5vw,32px);
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+    .work-card-name {
+      font-family:var(--font-serif);
+      font-size:1.3rem;
+      font-weight:400;
+      color:var(--text);
+      margin-bottom:16px;
+      line-height:1.2;
+    }
+    .work-card-context {
+      font-size:0.82rem;
+      color:var(--text-dim);
+      line-height:1.85;
+      font-weight:300;
+      margin-bottom:18px;
+    }
+    .work-card-need {
+      font-size:0.8rem;
+      color:var(--text-dim);
+      line-height:1.8;
+      font-weight:300;
+      padding-top:18px;
+      margin-bottom:24px;
+      border-top:1px solid var(--border);
+      flex:1;
+    }
+    .work-card-link {
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-family:var(--font-mono);
+      font-size:0.62rem;
+      font-weight:700;
+      letter-spacing:0.15em;
+      text-transform:uppercase;
+      color:var(--gold);
+      text-decoration:none;
+      transition:gap 0.3s;
+      align-self:flex-start;
+      margin-top:auto;
+    }
+    .work-card-link:hover { gap:12px; }
 
     /* ── TESTIMONIALS ── */
     .testimonials-section {
@@ -470,8 +493,7 @@
       .story-wrap{grid-template-columns:1fr}
       .edge-callouts{grid-template-columns:1fr}
       .services-grid{grid-template-columns:1fr}
-      .case-card-inner{grid-template-columns:1fr}
-      .case-info{border-right:none;border-bottom:1px solid var(--border)}
+      .work-grid{grid-template-columns:1fr}
       .t-card{flex:0 0 100%}
       .process-step{grid-template-columns:60px 1fr;gap:20px}
       footer{flex-direction:column;align-items:center;text-align:center;gap:16px}
@@ -599,7 +621,7 @@
       <p>A small selection of what I can show. Some of my work lives under confidentiality agreements — clients who needed the build done quietly and done right. What you see here is a fraction of what I have built. It is enough to show you how I think.</p>
     </div>
     <div class="work-grid reveal">
-      
+
       <article class="work-card">
         <img class="work-card-image" src="pb.jpg" alt="The Project Brand">
         <div class="work-card-body">
@@ -609,6 +631,7 @@
           <a href="http://theprojectbrand.com/" target="_blank" rel="noopener" class="work-card-link">View Live Site →</a>
         </div>
       </article>
+
       <article class="work-card">
         <img class="work-card-image" src="https://api.microlink.io/?url=https%3A%2F%2Fhostlyshortlets.vercel.app%2F&screenshot=true&meta=false&embed=screenshot.url" alt="Hostly website">
         <div class="work-card-body">
@@ -618,6 +641,7 @@
           <a href="https://hostlyshortlets.vercel.app/" target="_blank" rel="noopener" class="work-card-link">View Live Site →</a>
         </div>
       </article>
+
       <article class="work-card">
         <img class="work-card-image" src="https://api.microlink.io/?url=https%3A%2F%2Fdami-the-realtor.vercel.app&screenshot=true&meta=false&embed=screenshot.url" alt="Dami The Realtor website">
         <div class="work-card-body">
@@ -627,12 +651,11 @@
           <a href="https://dami-the-realtor.vercel.app" target="_blank" rel="noopener" class="work-card-link">View Live Site →</a>
         </div>
       </article>
-    </div>
-  </section>
-
 
     </div>
   </section>
+
+  <!-- TESTIMONIALS -->
   <section class="testimonials-section">
     <div class="testimonials-inner">
       <div class="testimonials-header">
