@@ -1,7 +1,15 @@
-const CACHE_NAME = 'lerin-portfolio-v1';
+const CACHE_NAME = 'lerin-portfolio-v9';
 const STATIC_ASSETS = [
   '/',
-  '/index.html'
+  '/index.html',
+  '/site.css',
+  '/site.js',
+  '/lerin.webp',
+  '/pb-fit.webp',
+  '/olufemi.webp',
+  '/blockchainltd.webp',
+  '/Sarah-3.webp',
+  '/olufemi-portrait.webp'
 ];
 
 // Install: cache core assets
