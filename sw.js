@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lerin-portfolio-v10';
+const CACHE_NAME = 'lerin-portfolio-v11';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -6,6 +6,8 @@ const STATIC_ASSETS = [
   '/site.js',
   '/favicon.svg',
   '/favicon.png',
+  '/preview.jpg',
+  '/preview.webp',
   '/lerin.webp',
   '/pb-fit.webp',
   '/olufemi.webp',
