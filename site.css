@@ -43,14 +43,20 @@ body.menu-open { overflow: hidden; }
   color: var(--muted);
 }
 
-h1, h2 {
+h1 {
   font-family: var(--display);
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.08;
 }
+h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.85rem, 3.2vw, 2.45rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
 h3 { font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; }
-h2 { font-size: clamp(1.85rem, 3.2vw, 2.45rem); }
 
 /* NAV */
 .nav {
